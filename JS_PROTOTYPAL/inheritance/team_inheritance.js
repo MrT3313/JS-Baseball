@@ -30,6 +30,9 @@
             }
         }
 
+        TeamObject.prototype.quitGame = () => {
+            console.log('somebody quit...')
+        }
         TeamObject.prototype.managerFreakOut = () => {
             console.log('THE MANAGER HAS FREAKED OUT')
         }
@@ -44,4 +47,4 @@
         city: 'testCity',
         name: 'testName',
     })
-    console.log('TEST TEAM OBJECT: ',testTeamObject)
+    // console.log('TEST TEAM OBJECT: ',testTeamObject)

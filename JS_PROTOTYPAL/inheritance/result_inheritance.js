@@ -29,15 +29,15 @@
 // === TESTING === //
 
     const testResult = new ResultObject({})
-    console.log("TEST RESULT OBJECT: ", testResult)
+    // console.log("TEST RESULT OBJECT: ", testResult)
 
     // - 1 - // Hit
         const testHit = new Hit({
             type: 'single'
         })
-        console.log('TEST HIT: ',testHit)
+        // console.log('TEST HIT: ',testHit)
     // - 2 - // Out
-    const testOut = new Out({
-        type: 'fielding'
-    })
-    console.log('TEST OUT: ',testOut)
+        const testOut = new Out({
+            type: 'fielding'
+        })
+        // console.log('TEST OUT: ',testOut)

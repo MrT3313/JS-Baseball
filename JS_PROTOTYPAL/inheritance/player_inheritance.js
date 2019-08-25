@@ -22,6 +22,9 @@
             PlayerObject.prototype.swing = () => {
                 console.log('swing')
             }
+                /* 
+                    All players need to be abel to hit and field -- only pitchers need to be able to pitch
+                */
     }
 
     // - 1 - // -- Default -- //
@@ -52,9 +55,16 @@
 
         // -- Prototype -- //
             Pitcher.prototype = Object.create(PlayerObject.prototype);
+            
+            // - 3A - //
             PlayerObject.prototype.pitch = () => {
                 console.log('pitch')
             }
+            /* 
+                ONLY pitchers will ever pitch -> pitchers 'never tire' 
+                -> in the future implement fatigue and fielders w/ terrible stats pitching 
+            */ 
+
 // -- *** -- //
 // -- *** -- //
 
@@ -69,18 +79,18 @@
             skill: 0
         }
     })
-    console.log('TEST PLAYER OBJECT: ', testPlayerObject)
+    // console.log('TEST PLAYER OBJECT: ', testPlayerObject)
 
     // - 1 - // Default
     const testDefault = new Default({
         position: 'ANYTHING'
     })
-    console.log('TEST DEFAULT PLAYER: ', testDefault)
+    // console.log('TEST DEFAULT PLAYER: ', testDefault)
     
     // - 2 - // DH
     const testDH = new DH({})
-    console.log('TEST DH: ', testDH)
+    // console.log('TEST DH: ', testDH)
     
     // - 3 - // Pitcher
     const testPitcher = new Pitcher({})
-    console.log('TEST PITCHER: ', testPitcher)
+    // console.log('TEST PITCHER: ', testPitcher)

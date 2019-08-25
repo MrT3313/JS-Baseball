@@ -37,6 +37,14 @@ function GameObject(game_attrs) {
             GameObject.call(this, inning_attrs)
             this.inningTime = new Date()
         }
+
+        // -- Prototype -- //
+            Inning.prototype = Object.create(GameObject.prototype);
+                /* 
+                    You will always be in an active inning so the HalfInning does not need to take the parent GameObject's prototype
+                */
+            
+
     // - 2 - // hanfInning
         function HalfInning(halfInning_attrs) {
             GameObject.call(this, halfInning_attrs)
@@ -51,12 +59,12 @@ function GameObject(game_attrs) {
         eventName: 'First Game',
         weather: 'Fuckin Beautiful',
     })
-    console.log('TEST GAME: ', testGame)
+    // console.log('TEST GAME: ', testGame)
 
     // - 1 - // Inning
     const testInning = new Inning({})
-    console.log('TEST INNING: ', testInning)
+    // console.log('TEST INNING: ', testInning)
 
     // - 2 - // Half Inning
     const testHalfInning = new HalfInning({})
-    console.log('TEST HALF INNING: ', testHalfInning)
+    // console.log('TEST HALF INNING: ', testHalfInning)

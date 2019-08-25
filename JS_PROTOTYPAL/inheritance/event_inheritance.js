@@ -31,7 +31,7 @@
 
 // === TESTING === //
     const testEventObject = new EventObject({})
-    console.log('TEST EVENT OBJECT: ',testEventObject)
+    // console.log('TEST EVENT OBJECT: ',testEventObject)
 
     // - 1 - // Pitch
     const testPitch = new Pitch({
@@ -39,7 +39,7 @@
             speed: 1000
         }
     })
-    console.log('TEST PITCH OBJECT: ', testPitch)
+    // console.log('TEST PITCH OBJECT: ', testPitch)
 
     // - 2 - // Contact
     const testContact = new Contact({
@@ -47,4 +47,4 @@
             contactPercent: 10.0 // ues 1000% ...
         }
     })
-    console.log('TEST CONTACT OBJECT: ', testContact)
+    // console.log('TEST CONTACT OBJECT: ', testContact)
