@@ -2,16 +2,16 @@ const computerPick = (availableArray) => {
     // console.log('insideComputerPick')
     // console.log('availableTeams', availableTeams)
 
-    let random = randomNum((availableArray.length -1), 0)
+    let max = availableArray.length - 1
+
+    let random = randomNum(max, 0)
         // console.log('random', random)
 
     let selected = availableArray.splice(random,1)
-        // console.log(selectedTeam)
+        console.log(selected)
 
-        if (selected[0] === undefined) {
-            stop
-            debugger
-
+        if (availableArray.includes(selected)) {
+            console.log('!!! ERROR !!!')
         }
 
         selected[0].user = 'Computer'

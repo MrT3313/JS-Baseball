@@ -25,4 +25,4 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
         console.log('=== TodaysCompetiton ===', TodaysCompetiton)
 
 // - 6 - // Draft Players
-    draftPlayers(num_human_players, TodaysCompetiton, playerUniverse)
+    // draftPlayers(num_human_players, TodaysCompetiton, playerUniverse)

@@ -13,5 +13,8 @@
 // Fill Team Universe
         const fillTeamUniverse = (teams) => teams.map( team => new TeamObject (team) )
 
+// ===  EXPORTS === //
+    module.exports = fillPlayerUniverse
+
 // === TESTING === //
 

@@ -8,20 +8,20 @@ const draftTeams = (num_human_players, teamUniverse) => {
     let malleable_draftArray = teamUniverse
     // console.log(malleable_draftArray)
     let result = undefined
-
+debugger
     switch(num_human_players) {
         case 'none': 
             console.log('inside case 0')
 
             result = computerPick(malleable_draftArray)
             gameTeam_1 = result[0]
-
-            console.log(gameTeam_1)
                 console.log('=== TEAM 1 ===',gameTeam_1)    
+
+            console.log(result[1])
 
             result = computerPick(result[1])
             gameTeam_2 = result[0]
-                console.log('=== TEAM 2 ===',gameTeam_1)    
+                console.log('=== TEAM 2 ===',gameTeam_2)    
 
             return [gameTeam_1,gameTeam_2]
         case 1: 
@@ -47,7 +47,7 @@ const draftTeams = (num_human_players, teamUniverse) => {
 
             result = userPick(result[1])
             gameTeam_2 = result[0]
-                console.log('=== TEAM 2 ===',gameTeam_1)    
+                console.log('=== TEAM 2 ===',gameTeam_2)    
 
             return [gameTeam_1,gameTeam_2]
         default: 
