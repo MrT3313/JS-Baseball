@@ -2,7 +2,7 @@
 // <= 2
 
 const queryUser_numPlayers = (params) => {
-    console.log('inside queryUser_numPlayers')
+    // console.log('inside queryUser_numPlayers')
 
     
     let numberOfPlayers = params || undefined
@@ -19,6 +19,6 @@ const queryUser_numPlayers = (params) => {
 
         numberOfPlayers = prompt('You can have up to 2 players')
     }
-console.log(typeof numberOfPlayers)
-console.log(numberOfPlayers)
+// console.log(typeof numberOfPlayers)
+// console.log(numberOfPlayers)
 return parseInt(numberOfPlayers)}
