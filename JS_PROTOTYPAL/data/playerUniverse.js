@@ -115,6 +115,42 @@
             },
             position: 'infield'
         },
+        {
+            firstName: 'Placeholder', lastName: 'Placeholder',
+            number: 99,
+            stats: {
+                power: 1,
+                skill: 1
+            },
+            position: 'infield'
+        },
+        {
+            firstName: 'Placeholder', lastName: 'Placeholder',
+            number: 99,
+            stats: {
+                power: 1,
+                skill: 1
+            },
+            position: 'infield'
+        },
+        {
+            firstName: 'Placeholder', lastName: 'Placeholder',
+            number: 99,
+            stats: {
+                power: 1,
+                skill: 1
+            },
+            position: 'infield'
+        },
+        {
+            firstName: 'Placeholder', lastName: 'Placeholder',
+            number: 99,
+            stats: {
+                power: 1,
+                skill: 1
+            },
+            position: 'infield'
+        },
         // -- Outfield -- //
         {
             firstName: 'Manny', lastName: 'Ramirez',

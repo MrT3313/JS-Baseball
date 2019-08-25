@@ -4,5 +4,8 @@ const userPick = (availableTeams) => {
 
     let userNumberPick = parseInt(prompt(`Pick a number between 1 and ${availableTeams.length}`))        
     let selectedTeam = availableTeams.splice(userNumberPick,1)
+    selectedTeam = selectedTeam[0]
+    selectedTeam.user = 'User'
+        // console.log(selectedTeam)
 
 return [selectedTeam, availableTeams]}

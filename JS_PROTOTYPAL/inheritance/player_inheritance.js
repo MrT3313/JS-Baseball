@@ -48,7 +48,7 @@
     // - 3 - // -- Pitcher -- //
         function Pitcher(pitcher_attrs) {
             PlayerObject.call(this, pitcher_attrs)
-            this.position = 'Pitcher'
+            this.position = 'pitcher'
             this.arm = pitcher_attrs.arm
             this.pitches = pitcher_attrs.pitches
         }
