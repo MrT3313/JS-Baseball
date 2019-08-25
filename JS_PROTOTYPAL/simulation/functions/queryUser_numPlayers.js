@@ -2,9 +2,11 @@
 // <= 2
 
 const queryUser_numPlayers = (params) => {
-    // let numberOfPlayers = prompt('How Many People Want To Play??')
+    console.log('inside queryUser_numPlayers')
+
+    
     let numberOfPlayers = params || undefined
-    numberOfPlayers = parseInt(numberOfPlayers)
+    // numberOfPlayers = parseInt(numberOfPlayers)
 
     while (numberOfPlayers === undefined || numberOfPlayers > 2) {
         /* 
@@ -15,8 +17,8 @@ const queryUser_numPlayers = (params) => {
             //     numberOfPlayers = prompt('Please enter a number')
             // }
 
-        numberOfPlayers = parseInt(prompt('You can have up to 2 players'))
+        numberOfPlayers = prompt('You can have up to 2 players')
     }
 console.log(typeof numberOfPlayers)
 console.log(numberOfPlayers)
-return numberOfPlayers}
+return parseInt(numberOfPlayers)}

@@ -9,6 +9,7 @@
 
 // === TeamObject ===
     function TeamObject(team_attrs) {
+        this.user = team_attrs.user
         this.city = team_attrs.city
         this.name = team_attrs.name
         this.teamPlayers = {

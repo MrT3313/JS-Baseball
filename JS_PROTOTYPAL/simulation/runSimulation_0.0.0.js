@@ -9,9 +9,14 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
         console.log(' === GAME SETUP HAS STARTED == ')
 
 // - 3 - // Create Team Objects
-    const num_human_players = queryUser_numPlayers('0') // remove number to trigger user prompt
+    const num_human_players = queryUser_numPlayers() // remove number to trigger user prompt
+    // const num_human_players = queryUser_numPlayers('0') // remove number to trigger user prompt
     const num_simulated_players = 2 - num_human_players
 
-// - 4 - // Draft Players
+// - 4 - // Make Team Objects
+    const gameTeams = makeTeamObjects(num_human_players)
+        console.log(gameTeams)
+
+
 
     

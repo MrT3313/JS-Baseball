@@ -1,7 +1,9 @@
 
 // Draft Teams
     
-    const draftTeams = (array_of_teams) => {
-        // 
+// Draft Teams
+    const draftTeams = () => {
+        console.log(randomNum(10,0))
+
         
-    }
+}
