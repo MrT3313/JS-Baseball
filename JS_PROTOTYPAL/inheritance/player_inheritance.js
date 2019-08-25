@@ -79,18 +79,18 @@
             skill: 0
         }
     })
-    // console.log('TEST PLAYER OBJECT: ', testPlayerObject)
+    console.log('TEST PLAYER OBJECT: ', testPlayerObject)
 
     // - 1 - // Default
     const testDefault = new Default({
         position: 'ANYTHING'
     })
-    // console.log('TEST DEFAULT PLAYER: ', testDefault)
+    console.log('TEST DEFAULT PLAYER: ', testDefault)
     
     // - 2 - // DH
     const testDH = new DH({})
-    // console.log('TEST DH: ', testDH)
+    console.log('TEST DH: ', testDH)
     
     // - 3 - // Pitcher
     const testPitcher = new Pitcher({})
-    // console.log('TEST PITCHER: ', testPitcher)
+    console.log('TEST PITCHER: ', testPitcher)

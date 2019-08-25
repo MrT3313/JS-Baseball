@@ -52,4 +52,4 @@
         city: 'testCity',
         name: 'testName',
     })
-    // console.log('TEST TEAM OBJECT: ',testTeamObject)
+    console.log('TEST TEAM OBJECT: ',testTeamObject)
