@@ -12,9 +12,14 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
         console.log('=== GAME SETUP HAS STARTED == ')
 
 // - 3 - // Query For Number Of Users
-    // const num_human_players = queryUser_numPlayers() // remove number to trigger user prompt
-    const num_human_players = queryUser_numPlayers('1') // remove number to trigger user prompt
+    const num_human_players = queryUser_numPlayers() // remove number to trigger user prompt
+    // let num_human_players = queryUser_numPlayers('0') // remove number to trigger user prompt
     const num_simulated_players = 2 - num_human_players
+
+    if (num_human_players === 0) {
+        num_human_players = 'none' 
+    }
+        
 
 // - 4 - // Make Team Objects
     // const gameTeams = makeTeamObjects(num_human_players)
@@ -23,4 +28,6 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
 // - 5 - // Draft Teams 
     const TodaysCompetiton = draftTeams(num_human_players, teamUniverse)
         console.log('=== TodaysCompetiton ===', TodaysCompetiton)
-    
+
+// - 6 - // Draft Players
+    // draftPlayers(TodaysCompetiton, playerUniverse)
