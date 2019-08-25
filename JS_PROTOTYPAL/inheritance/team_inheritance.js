@@ -30,6 +30,10 @@
             }
         }
 
+        TeamObject.prototype.draftTeam = () => {
+            console.log('the draft has started')
+            
+        }
         TeamObject.prototype.quitGame = () => {
             console.log('somebody quit...')
         }

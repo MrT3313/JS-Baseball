@@ -13,6 +13,14 @@
             city: 'New York',
             name: 'Yankees',
         },
+        {
+            city: 'Chicago',
+            name: 'Cubs',
+        },
+        {
+            city: 'St. Louis',
+            name: 'Cardinals',
+        },
     ]
 
 // -- *** -- //
