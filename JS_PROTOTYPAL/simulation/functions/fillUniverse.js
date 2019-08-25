@@ -13,18 +13,18 @@
 // -- *** -- //
 // -- *** -- //
 
-// -- Testing -- //
+// === TESTING === //
 
-if (teamUniverse.length < 2) {
-    alert('NOT ENOUGH TEAMS')
-}
-if (pitcher_universe.length < 2) {
-    alert("NOT ENOUGH PITCHERS")
-}
-if (db_universe.length < 2) {
-    alert("NOT ENOUGH DB")
-}
-if (default_universe.length < 14) {
-    alert("NOT ENOUGH DEFAULT PLAYERS")
-}
+    if (teamUniverse.length < 2) {
+        alert('NOT ENOUGH TEAMS')
+    }
+    if (pitcher_universe.length < 2) {
+        alert("NOT ENOUGH PITCHERS")
+    }
+    if (db_universe.length < 2) {
+        alert("NOT ENOUGH DB")
+    }
+    if (default_universe.length < 14) {
+        alert("NOT ENOUGH DEFAULT PLAYERS")
+    }
 
