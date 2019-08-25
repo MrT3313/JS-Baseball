@@ -8,7 +8,31 @@ More specifically lets use this simulated baseball project to show the differenc
 
 <hr>
 
+## Planned Inheritance:
 
+```
+- Game Object
+    - Team Object
+
+    - Player Object
+        - Default
+        - Pitcher
+        - DH
+    
+    - Events
+        - Contact
+        - Pitch
+
+    - Results
+        - Hit
+            - Single
+            - Double
+            - Triple
+            - Homerun
+        - Out
+            - Strikeout
+            - FieldingPlay
+```
 
 
 

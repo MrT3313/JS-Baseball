@@ -1,0 +1,19 @@
+
+// What Teams Are Available To Simulation??
+
+// -- *** -- //
+// -- *** -- //
+
+    const teams_array = [
+        {
+            city: 'Boston',
+            name: 'Red Sox',
+        },
+        {
+            city: 'New York',
+            name: 'Yankees',
+        },
+    ]
+
+// -- *** -- //
+// -- *** -- //
