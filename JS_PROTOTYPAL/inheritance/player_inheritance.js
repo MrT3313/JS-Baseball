@@ -8,7 +8,10 @@
 // -- *** -- *** -- *** -- *** -- *** -- //
 // -- *** -- *** -- *** -- *** -- *** -- //
 
-// === PlayerObject ===
+// === PlayerObject === //
+
+
+
     function PlayerObject(player_attrs) {
         this.firstName = player_attrs.firstName;
         this.lastName = player_attrs.lastName;
@@ -65,6 +68,13 @@
                 -> in the future implement fatigue and fielders w/ terrible stats pitching 
             */ 
 
+// -- EXPORTS -- //
+    module.exports = {
+        PlayerObject,
+        Default,
+        DH,
+        Pitcher
+    }
 // -- *** -- //
 // -- *** -- //
 

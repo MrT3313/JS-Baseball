@@ -77,6 +77,13 @@ debugger
 // -- *** -- //
 // -- *** -- //
 
+// -- EXPORTS -- //
+module.exports = {
+    TeamObject
+}
+// -- *** -- //
+// -- *** -- //
+
 // === TESTING === //
 
     const testTeamObject = new TeamObject({

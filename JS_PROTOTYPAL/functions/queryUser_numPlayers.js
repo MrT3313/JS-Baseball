@@ -22,3 +22,8 @@ const queryUser_numPlayers = (params) => {
 // console.log(typeof numberOfPlayers)
 // console.log(numberOfPlayers)
 return parseInt(numberOfPlayers)}
+
+// -- EXPORTS -- //
+    module.exports = {
+        queryUser_numPlayers
+    }

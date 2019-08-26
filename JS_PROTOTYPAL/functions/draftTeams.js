@@ -1,4 +1,8 @@
 
+// -- IMPORTS -- //
+    const COMPUTER_PICK = require('../functions/draft_computerPick.js')
+    const USER_PICK = require('../functions/draft_userPick.js')
+
 // Draft Teams
 
 const draftTeams = (num_human_players, teamUniverse) => {
@@ -13,13 +17,13 @@ debugger
         case 'none': 
             console.log('inside case 0')
 
-            result = computerPick(malleable_draftArray)
+            result = COMPUTER_PICK.computerPick(malleable_draftArray)
             gameTeam_1 = result[0]
                 console.log('=== TEAM 1 ===',gameTeam_1)    
 
-            console.log(result[1])
+            // console.log(result[1])
 
-            result = computerPick(result[1])
+            result = COMPUTER_PICK.computerPick(result[1])
             gameTeam_2 = result[0]
                 console.log('=== TEAM 2 ===',gameTeam_2)    
 
@@ -28,11 +32,11 @@ debugger
             console.log('inside case 1')
             alert('We have humbly given you first pick. Please note the humblness.')
 
-            result = userPick(malleable_draftArray)
+            result = USER_PICK.userPick(malleable_draftArray)
                 gameTeam_1 = result[0]
                 console.log('=== TEAM 1 ===',gameTeam_1)
             
-            result = computerPick(result[1])
+            result = COMPUTER_PICK.computerPick(result[1])
                 // console.log(result)
 
                 gameTeam_2 = result[0]
@@ -41,11 +45,11 @@ debugger
             return [gameTeam_1,gameTeam_2]
         case 2:
             console.log('inside case 2')
-            result = userPick(malleable_draftArray)
+            result = USER_PICK.userPick(malleable_draftArray)
             gameTeam_1 = result[0] 
                 console.log('=== TEAM 1 ===',gameTeam_1)    
 
-            result = userPick(result[1])
+            result = USER_PICK.userPick(result[1])
             gameTeam_2 = result[0]
                 console.log('=== TEAM 2 ===',gameTeam_2)    
 
@@ -53,5 +57,9 @@ debugger
         default: 
             return 'what is going on...'
     }
-
 }
+
+// -- EXPORTS -- //
+    module.exports = {
+        draftTeams
+    }

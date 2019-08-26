@@ -1,9 +1,24 @@
+// -- IMPORTS -- //
+    const PLAYER_INHERITANCE = require('../inheritance/player_inheritance.js')
+    const TEAM_INHERITANCE = require('../inheritance/team_inheritance.js')
+
+// Testing imports and exports with node .js
+
+    const testThisFunction = () => {
+        // console.log('this test just happened')
+        return 'this test just happened'
+    }
+//
+
+// -- *** -- //
+// -- *** -- //
 
 // Fill Player Universe
     const fillPlayerUniverse = (pitchers, DBs, defaults) => {
-        const pitcher_universe = pitchers.map( pitcher => new Pitcher (pitcher) )
-        const db_universe = DBs.map( dh => new DH (dh) )
-        const default_universe = defaults.map( player => new Default (player) )
+    // const fillPlayerUniverse = (pitchers, DBs, defaults) => {
+        const pitcher_universe = pitchers.map( pitcher => new PLAYER_INHERITANCE.Pitcher (pitcher) )
+        const db_universe = DBs.map( dh => new PLAYER_INHERITANCE.DH (dh) )
+        const default_universe = defaults.map( player => new PLAYER_INHERITANCE.Default (player) )
 
         const itemToReturn = pitcher_universe.concat(db_universe).concat(default_universe)
         // console.log('itemToReturn: ', itemToReturn)
@@ -11,10 +26,17 @@
 
 
 // Fill Team Universe
-        const fillTeamUniverse = (teams) => teams.map( team => new TeamObject (team) )
+        const fillTeamUniverse = (teams) => teams.map( team => new TEAM_INHERITANCE.TeamObject (team) )
 
 // ===  EXPORTS === //
-    module.exports = fillPlayerUniverse
+
+    const functions = {
+        fillPlayerUniverse,
+        fillTeamUniverse,
+        testThisFunction
+    }
+    
+    module.exports = functions
 
 // === TESTING === //
 

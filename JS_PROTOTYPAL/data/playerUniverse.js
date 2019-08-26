@@ -229,3 +229,10 @@
 
 // -- *** -- //
 // -- *** -- //
+
+// -- EXPORTS -- //
+    module.exports = {
+        default_array,
+        pitchers_Array,
+        dh_array
+    }

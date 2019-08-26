@@ -25,3 +25,6 @@
 
 // -- *** -- //
 // -- *** -- //
+
+// -- EXPORTS -- //
+    module.exports = teams_array
