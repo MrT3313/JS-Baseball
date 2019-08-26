@@ -57,16 +57,14 @@
         }
 
         // -- Prototype -- //
-            Pitcher.prototype = Object.create(PlayerObject.prototype);
-            
-            // - 3A - //
-            PlayerObject.prototype.pitch = () => {
-                console.log('pitch')
-            }
             /* 
                 ONLY pitchers will ever pitch -> pitchers 'never tire' 
                 -> in the future implement fatigue and fielders w/ terrible stats pitching 
             */ 
+            
+            Pitcher.prototype.pitch = () => {
+                console.log('pitch')
+            }
 
 // -- EXPORTS -- //
     module.exports = {

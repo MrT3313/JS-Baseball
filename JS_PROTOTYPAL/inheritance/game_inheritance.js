@@ -10,7 +10,8 @@
 
 // === Game Object === 
 function GameObject(game_attrs) {
-    this.gameTime = new Date();
+    this.gameTime = game_attrs.gameTime
+    this.endTime = game_attrs.endTime
     this.eventName = game_attrs.eventName
     this.weather = game_attrs.weather
 
@@ -18,9 +19,11 @@ function GameObject(game_attrs) {
         // Start & Stop //
             GameObject.prototype.startGame = () => {
                 console.log('The Game Has Started');
+                this.gameTime = new Date()
             }
             GameObject.prototype.gameOver = () => {
-                console.log('The Game Has Started');
+                console.log('The Game Has Ended');
+                this.endTime = new Date()
             }
 
         // Inning Progression
@@ -44,12 +47,18 @@ function GameObject(game_attrs) {
                     You will always be in an active inning so the HalfInning does not need to take the parent GameObject's prototype
                 */
             
-
     // - 2 - // hanfInning
         function HalfInning(halfInning_attrs) {
             GameObject.call(this, halfInning_attrs)
             this.hanfInningTime = new Date()
         }
+// -- *** -- //
+// -- *** -- //
+
+// -- EXPORTS -- //
+    module.exports = {
+        GameObject
+    }
 // -- *** -- //
 // -- *** -- //
 

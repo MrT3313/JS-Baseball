@@ -1,4 +1,7 @@
 // -- IMPORTS -- // 
+    // Inheritance
+        const GAME_INHERITANCE = require('../inheritance/game_inheritance.js')
+
     // Data 
         const TEAM_UNIVERSE = require('../data/teamUniverse.js')
         const PLAYERS_UNIVERSE = require('../data/playerUniverse.js')
@@ -13,8 +16,8 @@
 
 // -- *** -- //
 // -- *** -- START CODE -- *** -- //
-console.log('=== END OF TESTING ===')
-console.log('=== STARTING SIMULATION 0.0.0 ===')
+console.log('============================== END OF TESTING ==============================')
+console.log('============================== STARTING SIMULATION 0.0.0 ==============================')
 
     // - 1 - // Fill Universe
         const playerUniverse = FILL_UNIVERSE.fillPlayerUniverse(PLAYERS_UNIVERSE.pitchers_Array, PLAYERS_UNIVERSE.dh_array, PLAYERS_UNIVERSE.default_array)
@@ -25,7 +28,7 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
 
     // - 2 - // User Starts Game
         // alert('Ready Setup Your Game?')
-            console.log('=== GAME SETUP HAS STARTED == ')
+            console.log('=============== GAME SETUP HAS STARTED ============================== ')
 
     // - 3 - // Query For Number Of Users
         // let num_human_players = queryUser_numPlayers() // remove number to trigger user prompt
@@ -38,30 +41,28 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
 
     // - 5 - // Draft Teams 
         const TodaysCompetiton = DRAFT_TEAMS.draftTeams(num_human_players, teamUniverse)
-            console.log('=== TodaysCompetiton ===', TodaysCompetiton)
+            console.log('=============== TodaysCompetiton ===============', TodaysCompetiton)
 
     // - 6 - // Draft Players
         const TodaysCompetition_postDraft = DRAFT_PLAYERS.draftPlayers(TodaysCompetiton, playerUniverse)
-            console.log('=== TEAM 1 ===', TodaysCompetition_postDraft[0])
-                console.log('--- infielders:',TodaysCompetition_postDraft[0].teamPlayers.infielders.length)
-                console.log('--- outfielders:',TodaysCompetition_postDraft[0].teamPlayers.outfielders.length)
-                console.log('--- pitchers:',TodaysCompetition_postDraft[0].teamPlayers.pitchers.length)
-                console.log('--- DHs ---',TodaysCompetition_postDraft[0].teamPlayers.DHs.length)
-                console.log(
-                    TodaysCompetition_postDraft[0].teamPlayers.infielders.length +
-                    TodaysCompetition_postDraft[0].teamPlayers.outfielders.length + 
-                    TodaysCompetition_postDraft[0].teamPlayers.pitchers.length +
-                    TodaysCompetition_postDraft[0].teamPlayers.DHs.length
-                )
 
-            console.log('=== TEAM 2 ===', TodaysCompetition_postDraft[1])
-                console.log('--- infielders:',TodaysCompetition_postDraft[1].teamPlayers.infielders.length)
-                console.log('--- outfielders:',TodaysCompetition_postDraft[1].teamPlayers.outfielders.length)
-                console.log('--- pitchers:',TodaysCompetition_postDraft[1].teamPlayers.pitchers.length)
-                console.log('--- DHs:',TodaysCompetition_postDraft[1].teamPlayers.DHs.length)
-                console.log(
-                    TodaysCompetition_postDraft[1].teamPlayers.infielders.length +
-                    TodaysCompetition_postDraft[1].teamPlayers.outfielders.length + 
-                    TodaysCompetition_postDraft[1].teamPlayers.pitchers.length +
-                    TodaysCompetition_postDraft[1].teamPlayers.DHs.length
-                )
+    // - 7 - // Verify Full Teams
+
+    // - 8 - // Make Game Object
+        const todaysGame = new GAME_INHERITANCE.GameObject({
+            gameTime: new Date(),
+            eventName: 'First Game',
+            weather: 'Sunny',
+        })
+        todaysGame.activeTeams = TodaysCompetition_postDraft
+        console.log(todaysGame)
+
+    // - ???? - // WHERES THE GAME BRO
+
+    // n // Ending Message
+        console.log(` \n \n === === === The players showed up....but there was no structure... === === === \n \n  `)
+
+    // n + 1 // End Game
+        todaysGame.gameOver()
+        console.log(todaysGame)
+    

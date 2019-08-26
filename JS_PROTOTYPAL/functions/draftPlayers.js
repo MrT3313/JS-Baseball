@@ -17,18 +17,19 @@ const draftPlayers = (todaysCompetiton, playerUniverse) => {
     
     let malleable_draftArray = playerUniverse.map(item => item)
 
+    console.log(`=============== Start Player Draft ===============`)
+
     while 
         ( 
             !todaysCompetiton[0].checkRoster() || 
             !todaysCompetiton[1].checkRoster()
         ) {
             todaysCompetiton.forEach(team => {
-                console.log('=== start pick ===')
                 let i = 0
 
                 switch(team.user) {
                     case 'Computer':
-                        do { console.log('failed selection i loop',i)
+                        do { console.log('-x- failed selection i loop: ',i)
                             console.log(malleable_draftArray.length)
                             result = COMPUTER_PICK.computerPick(malleable_draftArray)
                                 // console.log(result)
@@ -80,7 +81,44 @@ const draftPlayers = (todaysCompetiton, playerUniverse) => {
     console.log(todaysCompetiton[0].checkRoster())
     console.log(todaysCompetiton[1].checkRoster())
     }
-console.log('=== DRAFT OVER ===')
+console.log('================================================== DRAFT OVER ==================================================')
+console.log('========================================= Basic Testing (Aggregates & Prototypes) =========================================')
+console.log('=== TEAM 1 ===', todaysCompetiton[0])
+console.log('--- infielders:',todaysCompetiton[0].teamPlayers.infielders.length)
+console.log('--- outfielders:',todaysCompetiton[0].teamPlayers.outfielders.length)
+console.log('--- pitchers:',todaysCompetiton[0].teamPlayers.pitchers.length)
+console.log('--- DHs ---',todaysCompetiton[0].teamPlayers.DHs.length)
+console.log(
+    todaysCompetiton[0].teamPlayers.infielders.length +
+    todaysCompetiton[0].teamPlayers.outfielders.length + 
+    todaysCompetiton[0].teamPlayers.pitchers.length +
+    todaysCompetiton[0].teamPlayers.DHs.length
+)
+
+console.log('=== TEAM 2 ===', todaysCompetiton[1])
+console.log('--- infielders:',todaysCompetiton[1].teamPlayers.infielders.length)
+console.log('--- outfielders:',todaysCompetiton[1].teamPlayers.outfielders.length)
+console.log('--- pitchers:',todaysCompetiton[1].teamPlayers.pitchers.length)
+console.log('--- DHs:',todaysCompetiton[1].teamPlayers.DHs.length)
+console.log(
+    todaysCompetiton[1].teamPlayers.infielders.length +
+    todaysCompetiton[1].teamPlayers.outfielders.length + 
+    todaysCompetiton[1].teamPlayers.pitchers.length +
+    todaysCompetiton[1].teamPlayers.DHs.length
+)
+
+// testing prototypes 
+todaysCompetiton[1].checkRoster()
+todaysCompetiton[1].draftTeam()
+todaysCompetiton[1].quitGame()
+todaysCompetiton[1].managerFreakOut()
+
+todaysCompetiton[1].teamPlayers.infielders[0].swing()
+todaysCompetiton[1].teamPlayers.outfielders[0].swing()
+todaysCompetiton[1].teamPlayers.pitchers[0].pitch()
+
+
+
 return todaysCompetiton}
 
 // -- EXPORTS -- //
