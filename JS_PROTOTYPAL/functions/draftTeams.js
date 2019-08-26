@@ -3,16 +3,16 @@
     const COMPUTER_PICK = require('../functions/draft_computerPick.js')
     const USER_PICK = require('../functions/draft_userPick.js')
 
-// Draft Teams
+// -- *** -- //
 
 const draftTeams = (num_human_players, teamUniverse) => {
     // console.log('num_human_players', num_human_players)
     // console.log('teamUniverse', teamUniverse)
 
     let malleable_draftArray = teamUniverse
-    // console.log(malleable_draftArray)
+        // console.log(malleable_draftArray)
     let result = undefined
-debugger
+
     switch(num_human_players) {
         case 'none': 
             console.log('inside case 0')

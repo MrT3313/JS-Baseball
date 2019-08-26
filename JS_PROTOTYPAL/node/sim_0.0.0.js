@@ -41,4 +41,27 @@ console.log('=== STARTING SIMULATION 0.0.0 ===')
             console.log('=== TodaysCompetiton ===', TodaysCompetiton)
 
     // - 6 - // Draft Players
-        // DRAFT_PLAYERS.draftPlayers(num_human_players, TodaysCompetiton, playerUniverse)
+        const TodaysCompetition_postDraft = DRAFT_PLAYERS.draftPlayers(TodaysCompetiton, playerUniverse)
+            console.log('=== TEAM 1 ===', TodaysCompetition_postDraft[0])
+                console.log('--- infielders:',TodaysCompetition_postDraft[0].teamPlayers.infielders.length)
+                console.log('--- outfielders:',TodaysCompetition_postDraft[0].teamPlayers.outfielders.length)
+                console.log('--- pitchers:',TodaysCompetition_postDraft[0].teamPlayers.pitchers.length)
+                console.log('--- DHs ---',TodaysCompetition_postDraft[0].teamPlayers.DHs.length)
+                console.log(
+                    TodaysCompetition_postDraft[0].teamPlayers.infielders.length +
+                    TodaysCompetition_postDraft[0].teamPlayers.outfielders.length + 
+                    TodaysCompetition_postDraft[0].teamPlayers.pitchers.length +
+                    TodaysCompetition_postDraft[0].teamPlayers.DHs.length
+                )
+
+            console.log('=== TEAM 2 ===', TodaysCompetition_postDraft[1])
+                console.log('--- infielders:',TodaysCompetition_postDraft[1].teamPlayers.infielders.length)
+                console.log('--- outfielders:',TodaysCompetition_postDraft[1].teamPlayers.outfielders.length)
+                console.log('--- pitchers:',TodaysCompetition_postDraft[1].teamPlayers.pitchers.length)
+                console.log('--- DHs:',TodaysCompetition_postDraft[1].teamPlayers.DHs.length)
+                console.log(
+                    TodaysCompetition_postDraft[1].teamPlayers.infielders.length +
+                    TodaysCompetition_postDraft[1].teamPlayers.outfielders.length + 
+                    TodaysCompetition_postDraft[1].teamPlayers.pitchers.length +
+                    TodaysCompetition_postDraft[1].teamPlayers.DHs.length
+                )

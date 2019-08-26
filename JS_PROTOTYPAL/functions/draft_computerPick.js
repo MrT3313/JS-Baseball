@@ -6,6 +6,7 @@
 const computerPick = (availableArray) => {
     // console.log('insideComputerPick')
     // console.log('availableTeams', availableTeams)
+    console.log('-x-', availableArray.length)
 
     let max = availableArray.length - 1
 

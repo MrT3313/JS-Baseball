@@ -2,14 +2,6 @@
     const PLAYER_INHERITANCE = require('../inheritance/player_inheritance.js')
     const TEAM_INHERITANCE = require('../inheritance/team_inheritance.js')
 
-// Testing imports and exports with node .js
-
-    const testThisFunction = () => {
-        // console.log('this test just happened')
-        return 'this test just happened'
-    }
-//
-
 // -- *** -- //
 // -- *** -- //
 
@@ -33,7 +25,6 @@
     const functions = {
         fillPlayerUniverse,
         fillTeamUniverse,
-        testThisFunction
     }
     
     module.exports = functions

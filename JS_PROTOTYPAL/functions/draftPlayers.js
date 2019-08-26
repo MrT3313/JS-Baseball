@@ -1,71 +1,89 @@
+// -- IMPORTS -- //
+    const COMPUTER_PICK = require('../functions/draft_computerPick.js')
+    const USER_PICK = require('../functions/draft_userPick.js')
+    const CHECK_ROSTER_CATEGORY = require('../functions/draft_checkRosterCategory.js')
 // Draft Players
 
-const draftPlayers = (num_human_players, todaysCompetiton, playerUniverse) => {
-    console.log(todaysCompetiton)
-    console.log(playerUniverse)
+const draftPlayers = (todaysCompetiton, playerUniverse) => {
+    // console.log(todaysCompetiton)
+    // console.log(playerUniverse)
 
+    
+    // -- Variables -- //
+        let result = undefined
+        let initialSelection = undefined
+        let adjustedTeam = undefined
+        
+    
     let malleable_draftArray = playerUniverse.map(item => item)
-        console.log(playerUniverse.length)
-        console.log(malleable_draftArray.length)
-
-    // console.log(todaysCompetiton[0].checkRoster())
-    // console.log(todaysCompetiton[1].checkRoster())
 
     while 
         ( 
-            !todaysCompetiton[0].checkRoster() && 
+            !todaysCompetiton[0].checkRoster() || 
             !todaysCompetiton[1].checkRoster()
         ) {
             todaysCompetiton.forEach(team => {
-                console.log(team.teamPlayers)
-                let result = undefined
-                // console.log(team.user)
-                debugger
+                console.log('=== start pick ===')
                 let i = 0
+
                 switch(team.user) {
                     case 'Computer':
-                        do { console.log(i)
-                            // if (i > 1) {
-                            //     alert('STOP')
-                            //     stop
-                            //     debugger
-                            // }
-
-                            result = computerPick(malleable_draftArray)
+                        do { console.log('failed selection i loop',i)
+                            console.log(malleable_draftArray.length)
+                            result = COMPUTER_PICK.computerPick(malleable_draftArray)
                                 // console.log(result)
+                            initialSelection = result[0]
+                                console.log('--- Initial Selection ---',initialSelection)
                             malleable_draftArray = result[1]
                                 // console.log(malleable_draftArray)
-    
-                            if (malleable_draftArray.length === 0) {
-                                stop
-                                debugger
-                            }
 
-                            adjustedTeam = checkRosterCategory(team, result[0], malleable_draftArray)
-                                console.log(adjustedTeam)
-debugger
+                            // -- *** -- //
+
+                            adjustedTeam = CHECK_ROSTER_CATEGORY.checkRosterCategory(team, initialSelection, malleable_draftArray)
+                                // console.log('---New Result---', adjustedTeam)
+                            
+                            if (adjustedTeam[0] === false) {
+                                malleable_draftArray = adjustedTeam[1]
+                                // console.log(malleable_draftArray)
+                            } else {
+                                console.log('--- outfielders', adjustedTeam.teamPlayers.outfielders.length)
+                                console.log('--- infielders',adjustedTeam.teamPlayers.infielders.length)
+                                console.log('--- pitchers',adjustedTeam.teamPlayers.pitchers.length)
+                                console.log('--- DHs',adjustedTeam.teamPlayers.DHs.length)                              
+                            }
+                            // console.log(adjustedTeam)
                         i++} while(
                             adjustedTeam === false
                         )
                         
-                        console.log('--- AdjustedTeam ---', adjustedTeam)
-// debugger
+                        // console.log('--- AdjustedTeam ---', adjustedTeam)
                         return adjustedTeam
                     case 'User':
+                        do { console.log(i)
+                            result = USER_PICK.userPick(malleable_draftArray)
+                            malleable_draftArray = result[1]
+                            adjustedTeam = CHECK_ROSTER_CATEGORY.checkRosterCategory(team, result[0], malleable_draftArray)
+                                // console.log(adjustedTeam)
+                        i++} while(
+                            adjustedTeam === false
+                        )
+                        return adjustedTeam
                     default:
                         return 'Whats Going On'
                 }
-            })
-        console.log(`=== UPDATED TODAYS COMPETITION ===`, todaysCompetiton)
-        console.log(`=== PLAYER UNIVERSE ===`, playerUniverse.length)
+            }
+        )
+        // console.log(`=== PLAYER UNIVERSE ===`, playerUniverse.length)
         console.log(`=== UPDATE MALLEABLE DRAFT ARRAY ===`, malleable_draftArray.length)
-        debugger}
-
-    if (todaysCompetiton[0].teamPlayers.infielders.length < 4) {
-        console.log('FIX THIS')
+        // console.log(`=== UPDATED TODAYS COMPETITION ===`, todaysCompetiton)
+    
+    console.log(todaysCompetiton[0].checkRoster())
+    console.log(todaysCompetiton[1].checkRoster())
     }
-}
+console.log('=== DRAFT OVER ===')
+return todaysCompetiton}
 
-// - 1 - // Infielders
-// - 1 - // Infielders
-// - 1 - // Infielders
+// -- EXPORTS -- //
+    module.exports = {
+        draftPlayers
+    }

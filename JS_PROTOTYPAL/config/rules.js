@@ -4,3 +4,8 @@ const GAME_RULES = {
     min_pitchers: 1,
     min_DHs: 1,
 }
+
+// -- EXPORTS -- //
+    module.exports = {
+        GAME_RULES
+    }
