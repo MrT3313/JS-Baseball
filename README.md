@@ -8,6 +8,18 @@ More specifically lets use this simulated baseball project to show the differenc
 
 <hr>
 
+## Versions
+### -x- Live Version -x- 1.0.0 
+
+### -x- Hello World -x- 0.0.0
+- Prototypal Inheritance Structure
+- Team Universe & Player Universe
+- Player Draft & Team Draft
+- Starting & Ending of Game
+
+
+
+
 ## Planned Inheritance:
 
 ```
