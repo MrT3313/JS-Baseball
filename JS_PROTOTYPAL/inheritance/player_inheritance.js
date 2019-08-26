@@ -8,7 +8,10 @@
 // -- *** -- *** -- *** -- *** -- *** -- //
 // -- *** -- *** -- *** -- *** -- *** -- //
 
-// === PlayerObject ===
+// === PlayerObject === //
+
+
+
     function PlayerObject(player_attrs) {
         this.firstName = player_attrs.firstName;
         this.lastName = player_attrs.lastName;
@@ -48,23 +51,28 @@
     // - 3 - // -- Pitcher -- //
         function Pitcher(pitcher_attrs) {
             PlayerObject.call(this, pitcher_attrs)
-            this.position = 'Pitcher'
+            this.position = 'pitcher'
             this.arm = pitcher_attrs.arm
             this.pitches = pitcher_attrs.pitches
         }
 
         // -- Prototype -- //
-            Pitcher.prototype = Object.create(PlayerObject.prototype);
-            
-            // - 3A - //
-            PlayerObject.prototype.pitch = () => {
-                console.log('pitch')
-            }
             /* 
                 ONLY pitchers will ever pitch -> pitchers 'never tire' 
                 -> in the future implement fatigue and fielders w/ terrible stats pitching 
             */ 
+            
+            Pitcher.prototype.pitch = () => {
+                console.log('pitch')
+            }
 
+// -- EXPORTS -- //
+    module.exports = {
+        PlayerObject,
+        Default,
+        DH,
+        Pitcher
+    }
 // -- *** -- //
 // -- *** -- //
 
@@ -79,18 +87,18 @@
             skill: 0
         }
     })
-    // console.log('TEST PLAYER OBJECT: ', testPlayerObject)
+    console.log('TEST PLAYER OBJECT: ', testPlayerObject)
 
     // - 1 - // Default
     const testDefault = new Default({
         position: 'ANYTHING'
     })
-    // console.log('TEST DEFAULT PLAYER: ', testDefault)
+    console.log('TEST DEFAULT PLAYER: ', testDefault)
     
     // - 2 - // DH
     const testDH = new DH({})
-    // console.log('TEST DH: ', testDH)
+    console.log('TEST DH: ', testDH)
     
     // - 3 - // Pitcher
     const testPitcher = new Pitcher({})
-    // console.log('TEST PITCHER: ', testPitcher)
+    console.log('TEST PITCHER: ', testPitcher)
