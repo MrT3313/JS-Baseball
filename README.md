@@ -12,29 +12,29 @@ More specifically lets use this simulated baseball project to show the differenc
 
 ```
 - Game Object
-    - Team Object
+- Team Object
 
-    - Player Object
-        - Default
-        - Pitcher
-        - DH
-    
-    - Events
-        - Contact
-        - Pitch
+- Player Object
+    - Default
+    - Pitcher
+    - DH
 
-    - Results
-        - Hit
-            - Single
-            - Double
-            - Triple
-            - Homerun
-        - Out
-            - Strikeout
-            - FieldingPlay
+### Not used in main simulation ###
+### Needs to be fleshed out ###
+- Events
+    - Contact
+    - Pitch
+
+- Results
+    - Hit
+        - Single
+        - Double
+        - Triple
+        - Homerun
+    - Out
+        - Strikeout
+        - FieldingPlay
 ```
-
-
 
 <hr>
 Author: Reed Turgeon
