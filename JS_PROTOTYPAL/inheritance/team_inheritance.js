@@ -19,7 +19,9 @@ const GAME_RULES = require('../config/rules.js')
             infielders: [],
             pitchers: [],
             DHs: [],
-        }
+        },
+        this.homeTeam = undefined
+        this.battingOrder_currentPosition = 0
 
     // -- prototype -- //
         TeamObject.prototype.checkRoster = function() {

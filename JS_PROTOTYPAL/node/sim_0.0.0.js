@@ -7,12 +7,12 @@
         const PLAYERS_UNIVERSE = require('../data/playerUniverse.js')
     
     // Functions
-        const FILL_UNIVERSE = require('../functions/fillUniverse.js')
-        const QUERYUSER_numHumanPlayers = require('../functions/queryUser_numPlayers.js')
+        const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js')
+        const QUERYUSER_numHumanPlayers = require('../functions/general/queryUser_numPlayers.js')
 
         // - Draft -  
-        const DRAFT_TEAMS = require('../functions/draftTeams.js')
-        const DRAFT_PLAYERS = require('../functions/draftPlayers.js')
+        const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js')
+        const DRAFT_PLAYERS = require('../functions/structure/draftLogic/draftPlayers.js')
 
 // -- *** -- //
 // -- *** -- START CODE -- *** -- //

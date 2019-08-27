@@ -1,6 +1,6 @@
 // -- IMPORTS -- //
-    const PLAYER_INHERITANCE = require('../inheritance/player_inheritance.js')
-    const TEAM_INHERITANCE = require('../inheritance/team_inheritance.js')
+    const PLAYER_INHERITANCE = require('../../inheritance/player_inheritance.js')
+    const TEAM_INHERITANCE = require('../../inheritance/team_inheritance.js')
 
 // -- *** -- //
 // -- *** -- //

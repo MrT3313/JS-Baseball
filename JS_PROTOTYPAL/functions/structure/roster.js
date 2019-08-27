@@ -1,5 +1,5 @@
 // Get Roster
-const getRoster = (teamObject) => {
+const Roster = (teamObject) => {
     console.log('=============== Get Roster ===============')
 
     const combined_playerCat_array =    teamObject.teamPlayers.outfielders.concat(
@@ -10,5 +10,5 @@ return combined_playerCat_array}
 
 // -- EXPORTS -- //
 module.exports = {
-    getRoster
+    Roster
 }

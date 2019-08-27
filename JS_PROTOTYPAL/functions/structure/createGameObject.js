@@ -1,6 +1,6 @@
 // -- IMPORTS -- // 
     // Inheritance
-    const GAME_INHERITANCE = require('../inheritance/game_inheritance.js')
+    const GAME_INHERITANCE = require('../../inheritance/game_inheritance.js')
 
 // -- *** -- //
 // -- *** -- //

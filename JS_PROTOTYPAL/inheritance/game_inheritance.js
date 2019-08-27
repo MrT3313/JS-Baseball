@@ -21,19 +21,20 @@ function GameObject(game_attrs) {
             GameObject.prototype.startGame = () => {
                 this.makeInning()
                 this.makeHalfInning()
+                this.makeHalfInning()
             }
         // Make Inning //
             GameObject.prototype.makeInning = () => {
                 // console.log('Inside Make Inninng')
-
-                newInning = new Inning(this)
+                const newInning = new Inning(this)
                 this.inningArray.push(newInning)
             }
         // Make HalfInning //
             GameObject.prototype.makeHalfInning = () => {
                 // console.log('Inside Make HalfInning')
 
-                newHalfInning = new HalfInning(this)
+                const newHalfInning = new HalfInning(this)
+                console.log('--- New Half Inning ---', newHalfInning)
                 this.inningArray[this.inningArray.length -1].halfInningArray.push(newHalfInning)
             }
 }
@@ -45,6 +46,7 @@ function GameObject(game_attrs) {
             // GameObject.call(this, inning_attrs) 
             this.inningTime = new Date()
             this.halfInningArray = []
+            this.top_bottom = undefined
         return this}
 
         // -- Inning prototype -- //
@@ -57,6 +59,17 @@ function GameObject(game_attrs) {
         function HalfInning(halfInning_attrs) {
             // GameObject.call(this, halfInning_attrs)
             this.halfInningTime = new Date()
+            this.outs
+        }
+
+    // - 3 - // atBat
+        function AtBat(atBat_attrs) {
+            console.log('--- Starting At Bat ---')
+            this.AtBatTime = new Date()
+            this.pitchCounter = {
+                balls: undefined,
+                strikes: undefined,
+            }
         }
 // -- *** -- //
 // -- *** -- //

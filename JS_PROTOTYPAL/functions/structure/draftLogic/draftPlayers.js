@@ -1,7 +1,7 @@
 // -- IMPORTS -- //
-    const COMPUTER_PICK = require('../functions/draft_computerPick.js')
-    const USER_PICK = require('../functions/draft_userPick.js')
-    const CHECK_ROSTER_CATEGORY = require('../functions/draft_checkRosterCategory.js')
+    const COMPUTER_PICK = require('./draft_computerPick')
+    const USER_PICK = require('./draft_userPick')
+    const CHECK_ROSTER_CATEGORY = require('./draft_checkRosterCategory')
 // Draft Players
 
 const draftPlayers = (todaysCompetiton, playerUniverse) => {

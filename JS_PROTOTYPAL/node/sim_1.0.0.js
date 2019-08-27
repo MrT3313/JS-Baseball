@@ -7,15 +7,16 @@
         const PLAYERS_UNIVERSE = require('../data/playerUniverse.js')
     
     // Functions
-        const FILL_UNIVERSE = require('../functions/fillUniverse.js')
-        const QUERYUSER_numHumanPlayers = require('../functions/queryUser_numPlayers.js')
-        const GET_ROSTER = require('../functions/getRoster.js') 
-        const CREATE_GAMEOBJECT = require('../functions/createGameObject.js')
-            console.log('************************',CREATE_GAMEOBJECT)
+        const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js')
+        const QUERYUSER_numHumanPlayers = require('../functions/general/queryUser_numPlayers.js')
+        const GET_ROSTER = require('../functions/structure/roster.js') 
+        const CREATE_GAMEOBJECT = require('../functions/structure/createGameObject.js')
+            // console.log('************************',CREATE_GAMEOBJECT)
+        const BATTING_ORDER = require('../functions/structure/battingOrder.js')
 
         // - Draft -  
-        const DRAFT_TEAMS = require('../functions/draftTeams.js')
-        const DRAFT_PLAYERS = require('../functions/draftPlayers.js')
+        const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js')
+        const DRAFT_PLAYERS = require('../functions/structure/draftLogic/draftPlayers.js')
 
 // -- *** -- //
 // -- *** -- START CODE -- *** -- //
@@ -50,37 +51,35 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
         const todaysCompetition_postDraft = DRAFT_PLAYERS.draftPlayers(todaysCompetiton, playerUniverse)
             console.log(todaysCompetition_postDraft)
 
-    // - 7 - // Verify Full Teams
-        console.log(todaysCompetition_postDraft[0].checkRoster())
-        console.log(todaysCompetition_postDraft[1].checkRoster())
-    
-        console.log(todaysCompetition_postDraft)
-        console.log(todaysCompetition_postDraft[0])
-        console.log(typeof todaysCompetition_postDraft[0])
-        console.log(todaysCompetition_postDraft[1])
+    // - 7 - // Get Roster
+        // Game 1 Roster & Batting Order
+            const game_1_roster = GET_ROSTER.Roster(todaysCompetition_postDraft[0])
+                // console.log(game_1_roster)
+                console.log(game_1_roster.length)
+            const game_1_battingOrder = BATTING_ORDER.battingOrder(game_1_roster)
+                // console.log(game_1_battingOrder)
+                console.log(game_1_battingOrder.length)
         
-    
-    // - 8 - // Get Roster
-        // return team rosters
-        const game_1_roster = GET_ROSTER.getRoster(todaysCompetition_postDraft[0])
-            console.log(game_1_roster)
-            
-        const game_2_roster = GET_ROSTER.getRoster(todaysCompetition_postDraft[1])
-            console.log(game_2_roster)
+        // Game 1 Roster & Batting Order
+            const game_2_roster = GET_ROSTER.Roster(todaysCompetition_postDraft[1])
+                // console.log(game_2_roster)
+                console.log(game_2_roster.length)
+            const game_2_battingOrder = BATTING_ORDER.battingOrder(game_2_roster)
+                // console.log(game_2_battingOrder)
+                console.log(game_2_battingOrder.length)
 
         // overwrite teamPlayers to be single arrray
         todaysCompetition_postDraft[0].teamPlayers = game_1_roster
+        todaysCompetition_postDraft[0].battingOrder = game_1_battingOrder
         todaysCompetition_postDraft[1].teamPlayers = game_2_roster
-
-        console.log(todaysCompetition_postDraft[0])
-        console.log(todaysCompetition_postDraft[1])
+        todaysCompetition_postDraft[1].battingOrder = game_2_battingOrder
 
     // - 8 - // Start Game
         let todaysGame = CREATE_GAMEOBJECT.createGameObject(todaysCompetition_postDraft)
-        console.log('=============== Todays Game ===============', todaysGame)
+        // console.log('=============== Todays Game ===============', todaysGame)
 
-    // - 9 - // Make First Inning --> nested half inning
-        // todaysGame.makeInning()
+    // - 9 - // Start the Game!!
+        console.log('=============== PLAY BALL ===============')
         todaysGame.startGame()
         console.log('=============== Todays Game ===============', todaysGame)
 
