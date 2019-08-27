@@ -14,34 +14,40 @@ function GameObject(game_attrs) {
     this.endTime = game_attrs.endTime
     this.eventName = game_attrs.eventName
     this.weather = game_attrs.weather
+    this.inningArray = []
 
-    // -- prototype -- //
-        // Start & Stop //
+    // -- Game Object prototype -- //
+        // Start Game //
             GameObject.prototype.startGame = () => {
-                console.log('The Game Has Started');
-                this.gameTime = new Date()
+                this.makeInning()
+                this.makeHalfInning()
             }
-            GameObject.prototype.gameOver = () => {
-                console.log('The Game Has Ended');
-                this.endTime = new Date()
-            }
+        // Make Inning //
+            GameObject.prototype.makeInning = () => {
+                // console.log('Inside Make Inninng')
 
-        // Inning Progression
-            GameObject.prototype.completed_halfInning = () => {
-                console.log('A 1/2 inning has completed')
+                newInning = new Inning(this)
+                this.inningArray.push(newInning)
             }
-            GameObject.prototype.completed_inning = () => {
-                console.log('A 1/2 inning has completed');
+        // Make HalfInning //
+            GameObject.prototype.makeHalfInning = () => {
+                // console.log('Inside Make HalfInning')
+
+                newHalfInning = new HalfInning(this)
+                this.inningArray[this.inningArray.length -1].halfInningArray.push(newHalfInning)
             }
 }
-
     // - 1 - // inning
         function Inning(inning_attrs) {
-            GameObject.call(this, inning_attrs)
+            /* 
+                uncomment `.call()` to be able to get ALL game data for ANY inning
+            */ 
+            // GameObject.call(this, inning_attrs) 
             this.inningTime = new Date()
-        }
+            this.halfInningArray = []
+        return this}
 
-        // -- Prototype -- //
+        // -- Inning prototype -- //
             Inning.prototype = Object.create(GameObject.prototype);
                 /* 
                     You will always be in an active inning so the HalfInning does not need to take the parent GameObject's prototype
@@ -49,15 +55,17 @@ function GameObject(game_attrs) {
             
     // - 2 - // hanfInning
         function HalfInning(halfInning_attrs) {
-            GameObject.call(this, halfInning_attrs)
-            this.hanfInningTime = new Date()
+            // GameObject.call(this, halfInning_attrs)
+            this.halfInningTime = new Date()
         }
 // -- *** -- //
 // -- *** -- //
 
 // -- EXPORTS -- //
     module.exports = {
-        GameObject
+        GameObject,
+        Inning,
+        HalfInning
     }
 // -- *** -- //
 // -- *** -- //

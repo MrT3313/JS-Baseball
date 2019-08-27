@@ -10,6 +10,8 @@
         const FILL_UNIVERSE = require('../functions/fillUniverse.js')
         const QUERYUSER_numHumanPlayers = require('../functions/queryUser_numPlayers.js')
         const GET_ROSTER = require('../functions/getRoster.js') 
+        const CREATE_GAMEOBJECT = require('../functions/createGameObject.js')
+            console.log('************************',CREATE_GAMEOBJECT)
 
         // - Draft -  
         const DRAFT_TEAMS = require('../functions/draftTeams.js')
@@ -68,25 +70,20 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
 
         // overwrite teamPlayers to be single arrray
         todaysCompetition_postDraft[0].teamPlayers = game_1_roster
-        todaysCompetition_postDraft[1].teamPlayers = game_1_roster
+        todaysCompetition_postDraft[1].teamPlayers = game_2_roster
 
         console.log(todaysCompetition_postDraft[0])
         console.log(todaysCompetition_postDraft[1])
 
-    // - 8 - // Start First Inning
+    // - 8 - // Start Game
+        let todaysGame = CREATE_GAMEOBJECT.createGameObject(todaysCompetition_postDraft)
+        console.log('=============== Todays Game ===============', todaysGame)
 
+    // - 9 - // Make First Inning --> nested half inning
+        // todaysGame.makeInning()
+        todaysGame.startGame()
+        console.log('=============== Todays Game ===============', todaysGame)
 
-
-
-
-    // - 8 - // Make Game Object
-    //     const todaysGame = new GAME_INHERITANCE.GameObject({
-    //         gameTime: new Date(),
-    //         eventName: 'First Game',
-    //         weather: 'Sunny',
-    //     })
-    //     todaysGame.activeTeams = TodaysCompetition_postDraft
-    //     console.log(todaysGame)
 
     // // - ???? - // WHERES THE GAME BRO
 
