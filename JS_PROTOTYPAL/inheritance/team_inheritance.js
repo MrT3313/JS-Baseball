@@ -47,10 +47,8 @@ const GAME_RULES = require('../config/rules.js')
                 gameRules_attribute = 'min_outfielders') : position === 'pitchers' ? (
                     gameRules_attribute = 'min_pitchers') : position === 'DHs' ? (
                         gameRules_attribute = 'min_DHs') : (console.log('What is going on...')) 
-            console.log('-x- Game Rules Attribute: ',gameRules_attribute)
-            // console.log(GAME_RULES)
-            // console.log(GAME_RULES.GAME_RULES)
-            console.log(GAME_RULES.GAME_RULES[gameRules_attribute])
+            console.log(`-x- Game Rules Attribute : ${GAME_RULES.GAME_RULES[gameRules_attribute]}`)
+
 
             if (
                 // team.teamPlayers[`${position}`].length !== 0 && 

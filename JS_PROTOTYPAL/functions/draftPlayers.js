@@ -107,18 +107,6 @@ console.log(
     todaysCompetiton[1].teamPlayers.DHs.length
 )
 
-// testing prototypes 
-todaysCompetiton[1].checkRoster()
-todaysCompetiton[1].draftTeam()
-todaysCompetiton[1].quitGame()
-todaysCompetiton[1].managerFreakOut()
-
-todaysCompetiton[1].teamPlayers.infielders[0].swing()
-todaysCompetiton[1].teamPlayers.outfielders[0].swing()
-todaysCompetiton[1].teamPlayers.pitchers[0].pitch()
-
-
-
 return todaysCompetiton}
 
 // -- EXPORTS -- //
