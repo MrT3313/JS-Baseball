@@ -16,10 +16,7 @@
         this.firstName = player_attrs.firstName;
         this.lastName = player_attrs.lastName;
         this.number = player_attrs.number;
-        this.stats = {
-            power: player_attrs.power, // hitting power
-            skill: player_attrs.skill, // fielding skill
-        }
+        this.stats = player_attrs.stats
 
         // -- Prototype -- //
             PlayerObject.prototype.swing = () => {

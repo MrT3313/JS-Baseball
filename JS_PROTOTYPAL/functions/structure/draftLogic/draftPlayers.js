@@ -14,8 +14,9 @@ const draftPlayers = (todaysCompetiton, playerUniverse) => {
         let initialSelection = undefined
         let adjustedTeam = undefined
         
-    
+    console.log('-x- AHHHHHHHHH -x-',playerUniverse[0])    
     let malleable_draftArray = playerUniverse.map(item => item)
+    console.log('-x- FIRST PLAYER IN DRAFT ARRAY -x-',malleable_draftArray[0])
 
     console.log(`=============== Start Player Draft ===============`)
 
@@ -29,12 +30,17 @@ const draftPlayers = (todaysCompetiton, playerUniverse) => {
 
                 switch(team.user) {
                     case 'Computer':
-                        do { console.log('-x- failed selection i loop: ',i)
-                            console.log(malleable_draftArray.length)
+                        do { 
+                            // console.log('-x- failed selection i loop: ',i)
+                            // console.log(malleable_draftArray.length)
+                            // console.log('-x- FIRST PLAYER IN DRAFT ARRAY -x-',malleable_draftArray[0])
+                            // console.log('-x- FIRST PLAYER IN DRAFT ARRAY -x-',malleable_draftArray[1])
+                            // console.log('-x- FIRST PLAYER IN DRAFT ARRAY -x-',malleable_draftArray[malleable_draftArray.length -1])
+                            // console.log('-x- FIRST PLAYER IN DRAFT ARRAY -x-',malleable_draftArray[malleable_draftArray.length -2])
                             result = COMPUTER_PICK.computerPick(malleable_draftArray)
                                 // console.log(result)
                             initialSelection = result[0]
-                                console.log('--- Initial Selection ---',initialSelection)
+                                // console.log('--- Initial Selection ---',initialSelection)
                             malleable_draftArray = result[1]
                                 // console.log(malleable_draftArray)
 
@@ -56,8 +62,7 @@ const draftPlayers = (todaysCompetiton, playerUniverse) => {
                         i++} while(
                             adjustedTeam === false
                         )
-                        
-                        // console.log('--- AdjustedTeam ---', adjustedTeam)
+
                         return adjustedTeam
                     case 'User':
                         do { console.log(i)
@@ -84,6 +89,7 @@ const draftPlayers = (todaysCompetiton, playerUniverse) => {
 console.log('================================================== DRAFT OVER ==================================================')
 console.log('========================================= Basic Testing (Aggregates & Prototypes) =========================================')
 console.log('=== TEAM 1 ===', todaysCompetiton[0])
+console.log('--- infielder[0]:',todaysCompetiton[0].teamPlayers.infielders[0])
 console.log('--- infielders:',todaysCompetiton[0].teamPlayers.infielders.length)
 console.log('--- outfielders:',todaysCompetiton[0].teamPlayers.outfielders.length)
 console.log('--- pitchers:',todaysCompetiton[0].teamPlayers.pitchers.length)

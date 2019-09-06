@@ -13,15 +13,18 @@ const computerPick = (availableArray) => {
     let random = RANDOM_NUMBER.randomNum(max, 0)
         // console.log('random', random)
 
-    let selected = availableArray.splice(random,1)
-        // console.log(selected)
+    let selected = availableArray[random]
+        // console.log('-x- SELECTED -x-', selected)
+
+    let updatedArray = availableArray.splice(random,1)
+        // console.log('-x- UPDATED ARRAY -x-', updatedArray)
 
         if (availableArray.includes(selected)) {
             console.log('!!! ERROR !!!')
         }
 
-        selected[0].user = 'Computer'
-return [selected[0], availableArray]}
+        selected.user = 'Computer'
+return [selected, availableArray]}
 
 // -- EXPORTS -- //
     module.exports = {

@@ -30,6 +30,42 @@
                 fastball: 90,
             },
         },
+        {
+            firstName: 'Roger', lastName: 'Clemens',
+            number: 25,
+            stats: {
+                power: 98,
+                skill: 82,
+            },
+            arm: 'right',
+            pitches: {
+                fastball: 90,
+            },
+        },
+        {
+            firstName: 'Cy', lastName: 'Young',
+            number: 25,
+            stats: {
+                power: 98,
+                skill: 82,
+            },
+            arm: 'right',
+            pitches: {
+                fastball: 90,
+            },
+        },
+        {
+            firstName: 'Randy', lastName: 'Johnson',
+            number: 25,
+            stats: {
+                power: 98,
+                skill: 82,
+            },
+            arm: 'right',
+            pitches: {
+                fastball: 90,
+            },
+        },
     ]
 // -- *** -- //
 // -- *** -- //
@@ -116,7 +152,7 @@
             position: 'infield'
         },
         {
-            firstName: 'Placeholder', lastName: 'Placeholder',
+            firstName: 'Yogi', lastName: 'Berra',
             number: 99,
             stats: {
                 power: 1,
@@ -125,29 +161,56 @@
             position: 'infield'
         },
         {
-            firstName: 'Placeholder', lastName: 'Placeholder',
+            firstName: 'Albert', lastName: 'Pujols',
             number: 99,
             stats: {
-                power: 1,
-                skill: 1
+                power: 99,
+                skill: 80
             },
             position: 'infield'
         },
         {
-            firstName: 'Placeholder', lastName: 'Placeholder',
+            firstName: 'Lou', lastName: 'Gehrig',
             number: 99,
             stats: {
-                power: 1,
-                skill: 1
+                power: 70,
+                skill: 70
             },
             position: 'infield'
         },
         {
-            firstName: 'Placeholder', lastName: 'Placeholder',
+            firstName: 'Derek', lastName: 'Jeter',
             number: 99,
             stats: {
-                power: 1,
-                skill: 1
+                power: 80,
+                skill: 100
+            },
+            position: 'infield'
+        },
+        {
+            firstName: 'Cal', lastName: 'Ripken Jr.',
+            number: 99,
+            stats: {
+                power: 80,
+                skill: 100
+            },
+            position: 'infield'
+        },
+        {
+            firstName: 'Wade', lastName: 'Boggs',
+            number: 99,
+            stats: {
+                power: 80,
+                skill: 100
+            },
+            position: 'infield'
+        },
+        {
+            firstName: 'Jackie', lastName: 'Robinson',
+            number: 99,
+            stats: {
+                power: 80,
+                skill: 100
             },
             position: 'infield'
         },
@@ -189,7 +252,16 @@
             position: 'outfield'
         },
         {
-            firstName: 'PlaceHolder', lastName: undefined,
+            firstName: 'Willie', lastName: 'Mays',
+            number: 1,
+            stats: {
+                power: 70,
+                skill: 70
+            },
+            position: 'outfield'
+        },
+        {
+            firstName: 'Mickey', lastName: 'Mantle',
             number: 1,
             stats: {
                 power: 1,
@@ -198,7 +270,7 @@
             position: 'outfield'
         },
         {
-            firstName: 'PlaceHolder', lastName: undefined,
+            firstName: 'Ken', lastName: 'Griffey Jr.',
             number: 1,
             stats: {
                 power: 1,
@@ -207,16 +279,7 @@
             position: 'outfield'
         },
         {
-            firstName: 'PlaceHolder', lastName: undefined,
-            number: 1,
-            stats: {
-                power: 1,
-                skill: 1
-            },
-            position: 'outfield'
-        },
-        {
-            firstName: 'PlaceHolder', lastName: undefined,
+            firstName: 'Hank', lastName: 'Aaron',
             number: 1,
             stats: {
                 power: 1,

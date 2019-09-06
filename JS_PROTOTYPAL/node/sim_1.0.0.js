@@ -27,7 +27,7 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
 
     // - 1 - // Fill Universe
         const playerUniverse = FILL_UNIVERSE.fillPlayerUniverse(PLAYERS_UNIVERSE.pitchers_Array, PLAYERS_UNIVERSE.dh_array, PLAYERS_UNIVERSE.default_array)
-            // console.log('PLAYER UNIVERSE: ', playerUniverse)
+            console.log('-x- PLAYER UNIVERSE -x-', playerUniverse)
 
         const teamUniverse = FILL_UNIVERSE.fillTeamUniverse(TEAM_UNIVERSE)
             // console.log('TEAM UNIVERSE: ', teamUniverse)
@@ -51,7 +51,7 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
 
     // - 6 - // Draft Players
         const todaysCompetition_postDraft = DRAFT_PLAYERS.draftPlayers(todaysCompetiton, playerUniverse)
-            console.log(todaysCompetition_postDraft)
+            // console.log('-x- POST DRAFT -x-',todaysCompetition_postDraft)
 
     // - 7 - // Get Roster
         // Game 1 Roster & Batting Order

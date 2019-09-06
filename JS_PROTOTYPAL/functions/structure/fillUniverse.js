@@ -7,9 +7,13 @@
 
 // Fill Player Universe
     const fillPlayerUniverse = (pitchers, DBs, defaults) => {
-    // const fillPlayerUniverse = (pitchers, DBs, defaults) => {
+        console.log('-x- PITCHERS -x-',pitchers)
+        // - //
         const pitcher_universe = pitchers.map( pitcher => new PLAYER_INHERITANCE.Pitcher (pitcher) )
+            console.log('-x- PITCHER UNIVERSE -x-',pitcher_universe)
+
         const db_universe = DBs.map( dh => new PLAYER_INHERITANCE.DH (dh) )
+            console.log('-x- DB UNIVERSE -x-',db_universe)
         const default_universe = defaults.map( player => new PLAYER_INHERITANCE.Default (player) )
 
         const itemToReturn = pitcher_universe.concat(db_universe).concat(default_universe)
