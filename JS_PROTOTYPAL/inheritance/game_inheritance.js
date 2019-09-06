@@ -20,14 +20,18 @@ function GameObject(game_attrs) {
         // Start Game //
             GameObject.prototype.startGame = () => {
                 this.makeInning()
-                this.makeHalfInning()
-                this.makeHalfInning()
+                // this.makeHalfInning()
+                // this.makeAtBat()
+
             }
         // Make Inning //
             GameObject.prototype.makeInning = () => {
                 // console.log('Inside Make Inninng')
                 const newInning = new Inning(this)
                 this.inningArray.push(newInning)
+
+                this.makeHalfInning()
+                // this.makeAtBat()
             }
         // Make HalfInning //
             GameObject.prototype.makeHalfInning = () => {
@@ -36,6 +40,17 @@ function GameObject(game_attrs) {
                 const newHalfInning = new HalfInning(this)
                 console.log('--- New Half Inning ---', newHalfInning)
                 this.inningArray[this.inningArray.length -1].halfInningArray.push(newHalfInning)
+
+                this.makeAtBat()
+            }
+
+        // Make At Bat // 
+            GameObject.prototype.makeAtBat = () => {
+                const newAtBat = new AtBat(this)
+                console.log('--- New At Bat ---', newAtBat)
+                this.inningArray[this.inningArray.length -1].halfInningArray[
+                    this.inningArray[this.inningArray.length -1].halfInningArray.length - 1
+                ].atBatsArray.push(newAtBat)
             }
 }
     // - 1 - // inning
@@ -55,12 +70,19 @@ function GameObject(game_attrs) {
                     You will always be in an active inning so the HalfInning does not need to take the parent GameObject's prototype
                 */
             
-    // - 2 - // hanfInning
+    // - 2 - // halfInning
         function HalfInning(halfInning_attrs) {
             // GameObject.call(this, halfInning_attrs)
             this.halfInningTime = new Date()
-            this.outs
+            this.outs = 0
+            this.atBatsArray = []
         }
+        // -- Half Inning Prototype -- //
+            HalfInning.prototype.checkOuts = () => {
+                console.log('this', this)
+                
+            }
+        
 
     // - 3 - // atBat
         function AtBat(atBat_attrs) {

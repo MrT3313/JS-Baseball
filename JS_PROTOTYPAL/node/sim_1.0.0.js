@@ -13,6 +13,7 @@
         const CREATE_GAMEOBJECT = require('../functions/structure/createGameObject.js')
             // console.log('************************',CREATE_GAMEOBJECT)
         const BATTING_ORDER = require('../functions/structure/battingOrder.js')
+        const SET_CURRENT = require('../functions/2.0.0/gameLogic/setCurrent.js')
 
         // - Draft -  
         const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js')
@@ -82,7 +83,22 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
         console.log('=============== PLAY BALL ===============')
         todaysGame.startGame()
         console.log('=============== Todays Game ===============', todaysGame)
+    
+    // - 10 - // Set Current Inning, HalfInning, & AtBat
+        let current_Inning = SET_CURRENT.setCurrent_Inning(todaysGame)
+            console.log('Current Inning',current_Inning)
 
+        let current_HalfInning = SET_CURRENT.setCurrent_HalfInning(todaysGame)
+            console.log('Current HalfInning',current_HalfInning)
+
+        let current_AtBat = SET_CURRENT.setCurrent_AtBat(current_HalfInning)
+            console.log('Current At Bat',current_AtBat)
+
+
+
+
+
+        
 
     // // - ???? - // WHERES THE GAME BRO
 
