@@ -34,9 +34,32 @@
     return result}
 
 // 4 // Current Batter
-    const setCurrent_Batter = () => {
+    const setCurrent_Batter = (current_half_inning, teams) => {
+        console.log('Inside Set Current Batter')
+        console.log(current_half_inning, teams)
+        let result = undefined
+        // - //
 
-    }
+
+
+        current_half_inning.top_bottom === 'top' ? (
+            teams.forEach(team => {
+                if (team.homeTeam === true) {
+                    result = team.battingOrder[team.battingOrder_currentPosition]
+                }
+            })
+        ) : (
+            current_half_inning.top_bottom === 'bottom' ? (
+                teams.forEach(team => {
+                    if (team.homeTeam === false) {
+                        result = team.battingOrder[team.battingOrder_currentPosition]
+                    }
+                })
+            ) : (
+                result = 'What is going on...'
+            )
+        )
+    return result}
 
 // EXPORTS
     module.exports = {

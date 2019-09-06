@@ -39,18 +39,18 @@ function GameObject(game_attrs) {
                 let halfInning_label = undefined
                 // - //
 
-                if (this.inningArray[this.inningArray.length -1].halfInningArray.length === 0){
-                    halfInning_label = 'top'
-                } else if (
-                    (this.inningArray[this.inningArray.length -1].halfInningArray.length % 2) !== 0
-                ) {
+                if (
+                        this.inningArray[this.inningArray.length -1].halfInningArray.length === 0 ||
+                        (this.inningArray[this.inningArray.length -1].halfInningArray.length % 2) !== 0
+                    ){
                     halfInning_label = 'top'
                 } else if (
                     (this.inningArray[this.inningArray.length -1].halfInningArray.length % 2) === 0
                 ) {
                     halfInning_label = 'bottom'
+                } else {
+                    console.log('What is going on...')
                 }
-
 
                 const newHalfInning = new HalfInning(halfInning_label)
                 console.log('--- New Half Inning ---', newHalfInning)
@@ -76,7 +76,6 @@ function GameObject(game_attrs) {
             // GameObject.call(this, inning_attrs) 
             this.inningTime = new Date()
             this.halfInningArray = []
-            this.top_bottom = undefined
         return this}
 
         // -- Inning prototype -- //
