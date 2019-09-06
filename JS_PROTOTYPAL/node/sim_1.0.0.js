@@ -14,6 +14,7 @@
             // console.log('************************',CREATE_GAMEOBJECT)
         const BATTING_ORDER = require('../functions/structure/battingOrder.js')
         const SET_CURRENT = require('../functions/2.0.0/gameLogic/setCurrent.js')
+        const CHECK_PITCH_CONDITIONS = require('../functions/2.0.0/gameLogic/checkPitchConditions.js')
 
         // - Draft -  
         const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js')
@@ -95,6 +96,9 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
             console.log('Current At Bat',current_AtBat)
 
 
+    // - 11 - // Check Pitch Conditions
+        let checkPitchConditions_results = CHECK_PITCH_CONDITIONS.check_pitchConditions(current_AtBat)
+            console.log('Pitch Result',checkPitchConditions_results)
 
 
 

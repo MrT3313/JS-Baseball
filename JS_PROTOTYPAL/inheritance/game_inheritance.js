@@ -89,8 +89,8 @@ function GameObject(game_attrs) {
             console.log('--- Starting At Bat ---')
             this.AtBatTime = new Date()
             this.pitchCounter = {
-                balls: undefined,
-                strikes: undefined,
+                balls: 0,
+                strikes: 0,
             }
         }
 // -- *** -- //
