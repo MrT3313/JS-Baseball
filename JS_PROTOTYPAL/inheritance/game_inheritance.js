@@ -36,8 +36,23 @@ function GameObject(game_attrs) {
         // Make HalfInning //
             GameObject.prototype.makeHalfInning = () => {
                 // console.log('Inside Make HalfInning')
+                let halfInning_label = undefined
+                // - //
 
-                const newHalfInning = new HalfInning(this)
+                if (this.inningArray[this.inningArray.length -1].halfInningArray.length === 0){
+                    halfInning_label = 'top'
+                } else if (
+                    (this.inningArray[this.inningArray.length -1].halfInningArray.length % 2) !== 0
+                ) {
+                    halfInning_label = 'top'
+                } else if (
+                    (this.inningArray[this.inningArray.length -1].halfInningArray.length % 2) === 0
+                ) {
+                    halfInning_label = 'bottom'
+                }
+
+
+                const newHalfInning = new HalfInning(halfInning_label)
                 console.log('--- New Half Inning ---', newHalfInning)
                 this.inningArray[this.inningArray.length -1].halfInningArray.push(newHalfInning)
 
@@ -73,9 +88,11 @@ function GameObject(game_attrs) {
     // - 2 - // halfInning
         function HalfInning(halfInning_attrs) {
             // GameObject.call(this, halfInning_attrs)
+            console.log('==========', this)
             this.halfInningTime = new Date()
             this.outs = 0
             this.atBatsArray = []
+            this.top_bottom = halfInning_attrs
         }
         // -- Half Inning Prototype -- //
             HalfInning.prototype.checkOuts = () => {

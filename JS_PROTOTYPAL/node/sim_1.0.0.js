@@ -85,7 +85,7 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
         todaysGame.startGame()
         console.log('=============== Todays Game ===============', todaysGame)
     
-    // - 10 - // Set Current Inning, HalfInning, & AtBat
+    // - 10 - // Set Current Inning, HalfInning, AtBat & Batter
         let current_Inning = SET_CURRENT.setCurrent_Inning(todaysGame)
             console.log('Current Inning',current_Inning)
 
@@ -95,6 +95,8 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
         let current_AtBat = SET_CURRENT.setCurrent_AtBat(current_HalfInning)
             console.log('Current At Bat',current_AtBat)
 
+        let current_Batter = SET_CURRENT.setCurrent_Batter()
+            console.log('Current Batter',current_Batter)
 
     // - 11 - // Check Pitch Conditions
         let checkPitchConditions_results = CHECK_PITCH_CONDITIONS.check_pitchConditions(current_AtBat)

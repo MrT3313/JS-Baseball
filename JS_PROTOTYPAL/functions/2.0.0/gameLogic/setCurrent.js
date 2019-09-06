@@ -33,9 +33,15 @@
             result = current_atBat
     return result}
 
+// 4 // Current Batter
+    const setCurrent_Batter = () => {
+
+    }
+
 // EXPORTS
     module.exports = {
         setCurrent_Inning,
         setCurrent_HalfInning,
-        setCurrent_AtBat
+        setCurrent_AtBat,
+        setCurrent_Batter,
     }
