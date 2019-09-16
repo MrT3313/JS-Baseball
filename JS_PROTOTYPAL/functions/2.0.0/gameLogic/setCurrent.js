@@ -40,8 +40,6 @@
         let result = undefined
         // - //
 
-
-
         current_half_inning.top_bottom === 'top' ? (
             teams.forEach(team => {
                 if (team.homeTeam === true) {
@@ -61,10 +59,39 @@
         )
     return result}
 
+// 5 // Current Pitcher
+    const setCurrent_Pitcher = (current_half_inning, teams) => {
+        console.log("Inside Set Current Pitcher")
+        console.log(current_half_inning, teams)
+        let result = undefined
+        // - //
+
+        current_half_inning.top_bottom = 'top' ? (
+            teams.forEach(team => {
+                if (team.homeTeam === true) {
+                    pitcherArray = team.teamPlayers.filter(player => player.position === 'pitcher')
+                    result = pitcherArray[0]
+                }
+            })
+        ) : (
+            current_half_inning.top_bottom = 'bottom' ? (
+                teams.forEach(team => {
+                    if(team.homeTeam === false) {
+                        pitcherArray = team.teamPlayers.filter(player => player.position === 'pitcher')
+                        result = pitcherArray[0]
+                    }
+                })
+            ) : (
+                result = 'What is going on'
+            )
+        )
+    return result}
+
 // EXPORTS
     module.exports = {
         setCurrent_Inning,
         setCurrent_HalfInning,
         setCurrent_AtBat,
         setCurrent_Batter,
+        setCurrent_Pitcher
     }

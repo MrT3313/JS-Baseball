@@ -97,12 +97,22 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
 
         let current_Batter = SET_CURRENT.setCurrent_Batter(current_HalfInning, todaysGame.activeTeams)
             console.log('Current Batter',current_Batter)
+        
+        let current_Pitcher = SET_CURRENT.setCurrent_Pitcher(current_AtBat, todaysGame.activeTeams)
+            console.log('Current Pitcher', current_Pitcher)
 
     // - 11 - // Check Pitch Conditions
         let checkPitchConditions_results = CHECK_PITCH_CONDITIONS.check_pitchConditions(current_AtBat)
-            console.log('Pitch Result',checkPitchConditions_results)
+            console.log('Check Pitch Conditions',checkPitchConditions_results)
 
+    // - 12 - // PITCH
+        current_Pitcher.pitch()
 
+    // - 13 - // SWING
+        current_Batter.swing()
+        // current_Batter.pitch()
+
+    // - 14 - // RESULT
 
         
 

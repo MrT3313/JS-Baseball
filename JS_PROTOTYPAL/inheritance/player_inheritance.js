@@ -17,15 +17,17 @@
         this.lastName = player_attrs.lastName;
         this.number = player_attrs.number;
         this.stats = player_attrs.stats
-
+    }
         // -- Prototype -- //
+        /* 
+            All players need to be abel to hit and field -- only pitchers need to be able to pitch
+        */
             PlayerObject.prototype.swing = () => {
                 console.log('swing')
             }
-                /* 
-                    All players need to be abel to hit and field -- only pitchers need to be able to pitch
-                */
-    }
+            // PlayerObject.prototype.pitch = () => {
+            //     console.log('pitch')
+            // }
 
     // - 1 - // -- Default -- //
         function Default(default_attrs) {
@@ -58,10 +60,9 @@
                 ONLY pitchers will ever pitch -> pitchers 'never tire' 
                 -> in the future implement fatigue and fielders w/ terrible stats pitching 
             */ 
-            
             Pitcher.prototype.pitch = () => {
-                console.log('pitch')
-            }
+            console.log('pitch')
+        }
 
 // -- EXPORTS -- //
     module.exports = {
