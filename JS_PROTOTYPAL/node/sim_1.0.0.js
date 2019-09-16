@@ -106,14 +106,16 @@ console.log('============================== STARTING SIMULATION 0.0.0 ==========
             console.log('Check Pitch Conditions',checkPitchConditions_results)
 
     // - 12 - // PITCH
-        current_Pitcher.pitch()
+        active_Pitch = current_Pitcher.pitch(current_Pitcher)
+            console.log('Active Pitch', active_Pitch)
 
     // - 13 - // SWING
-        current_Batter.swing()
-        // current_Batter.pitch()
+        active_Swing = current_Batter.swing(current_Batter)
+            console.log('Active Swing', active_Swing)
 
     // - 14 - // RESULT
-
+        current_AtBat = current_AtBat.pitchResult(current_AtBat, active_Pitch, active_Swing)
+            console.log(current_AtBat)
         
 
     // // - ???? - // WHERES THE GAME BRO

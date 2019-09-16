@@ -3,6 +3,7 @@ const GAME_RULES = {
     min_outfielders: 3,
     min_pitchers: 1,
     min_DHs: 1,
+    activePitch_BALL_threshold: 40,
 }
 
 // -- EXPORTS -- //

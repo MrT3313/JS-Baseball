@@ -155,8 +155,8 @@
             firstName: 'Yogi', lastName: 'Berra',
             number: 99,
             stats: {
-                power: 1,
-                skill: 1
+                power: 70,
+                skill: 70
             },
             position: 'infield'
         },
@@ -264,8 +264,8 @@
             firstName: 'Mickey', lastName: 'Mantle',
             number: 1,
             stats: {
-                power: 1,
-                skill: 1
+                power: 70,
+                skill: 70
             },
             position: 'outfield'
         },
@@ -273,8 +273,8 @@
             firstName: 'Ken', lastName: 'Griffey Jr.',
             number: 1,
             stats: {
-                power: 1,
-                skill: 1
+                power: 70,
+                skill: 70
             },
             position: 'outfield'
         },
@@ -282,8 +282,8 @@
             firstName: 'Hank', lastName: 'Aaron',
             number: 1,
             stats: {
-                power: 1,
-                skill: 1
+                power: 70,
+                skill: 70
             },
             position: 'outfield'
         },

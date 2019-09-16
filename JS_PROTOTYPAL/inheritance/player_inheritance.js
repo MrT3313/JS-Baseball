@@ -1,3 +1,6 @@
+// IMPORTS
+    const RANDOM_NUMBER = require('../functions/2.0.0/helpers/randomNumGen.js')
+
 /* KEY
     === : Parent Object
     - # - : Child Object
@@ -22,9 +25,15 @@
         /* 
             All players need to be abel to hit and field -- only pitchers need to be able to pitch
         */
-            PlayerObject.prototype.swing = () => {
+            PlayerObject.prototype.swing = (batter) => {
                 console.log('swing')
-            }
+                console.log(batter)
+
+                const swing_Power = batter.stats.power 
+                const dynamicSwing_Power = ( RANDOM_NUMBER.randomNum(100,0) / 100 )
+                const finalSwing_Power = swing_Power * dynamicSwing_Power
+
+            return finalSwing_Power}
             // PlayerObject.prototype.pitch = () => {
             //     console.log('pitch')
             // }
@@ -60,9 +69,13 @@
                 ONLY pitchers will ever pitch -> pitchers 'never tire' 
                 -> in the future implement fatigue and fielders w/ terrible stats pitching 
             */ 
-            Pitcher.prototype.pitch = () => {
-            console.log('pitch')
-        }
+            Pitcher.prototype.pitch = (pitcher) => {
+                console.log('pitch')
+
+                const pitch_Power = pitcher.pitches.fastball
+                const dynamicPitch_Power = ( RANDOM_NUMBER.randomNum(100,0) / 100 )
+                const finalPitch_Power = pitch_Power * dynamicPitch_Power
+            return finalPitch_Power}
 
 // -- EXPORTS -- //
     module.exports = {

@@ -1,3 +1,6 @@
+// IMPORTS
+const GAME_RULES = require('../config/rules.js')
+
 /* KEY
     === : Parent Object
     - # - : Child Object
@@ -109,6 +112,58 @@ function GameObject(game_attrs) {
                 strikes: 0,
             }
         }
+        // -- AtBat Prototype -- //
+            AtBat.prototype.pitchResult = (current_AtBat, active_Pitch, active_Swing) => {
+                console.log('pitchResult')
+                console.log(current_AtBat)
+                const BALL_Threshold = GAME_RULES.GAME_RULES.activePitch_BALL_threshold
+                    console.log(BALL_Threshold)
+
+
+                if (active_Pitch < BALL_Threshold) {
+                    console.log('BALL')
+                    current_AtBat.pitchCounter.balls += 1
+                }
+
+                if (active_Pitch < active_Swing) {
+                    console.log('CONTACT')
+
+                    const contactResult = active_Swing / active_Pitch - 1
+                        console.log(contactResult)
+
+                    if (
+                            (contactResult) >= .0 &&
+                            (contactResult) < .5 
+                        ) {
+                        console.log('SINGLE')
+                    }
+                    if (
+                            (contactResult) >= .5 &&
+                            (contactResult) < .75 
+                        ) {
+                        console.log('DOUBLE')
+                    }
+                    if (
+                            (contactResult) >= .75 &&
+                            (contactResult) < 1 
+                        ) {
+                        console.log('TRIPLE')
+                    }
+                    if (
+                            (contactResult) >= 1 
+                        ) {
+                        console.log('HOME RUN')
+                    }
+                }
+
+                if (active_Pitch > BALL_Threshold) {
+                    console.log('STRIKE')
+                    current_AtBat.pitchCounter.strikes += 1
+                }
+
+
+            return current_AtBat}
+
 // -- *** -- //
 // -- *** -- //
 
