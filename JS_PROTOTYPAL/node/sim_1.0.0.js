@@ -1,6 +1,6 @@
 // -- IMPORTS -- // 
     // Inheritance
-        const GAME_INHERITANCE = require('../inheritance/game_inheritance.js')
+        const GAME_INHERITANCE = require('../inheritance/OLD/game_inheritance.js/index.js')
 
     // Data 
         const TEAM_UNIVERSE = require('../data/teamUniverse.js')
@@ -8,13 +8,13 @@
     
     // Functions
         const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js')
-        const QUERYUSER_numHumanPlayers = require('../functions/general/queryUser_numPlayers.js')
+        const QUERYUSER_numHumanPlayers = require('../functions/1.0.0_OLD/general/queryUser_numPlayers.js.js.js')
         const GET_ROSTER = require('../functions/structure/roster.js') 
         const CREATE_GAMEOBJECT = require('../functions/structure/createGameObject.js')
             // console.log('************************',CREATE_GAMEOBJECT)
         const BATTING_ORDER = require('../functions/structure/battingOrder.js')
-        const SET_CURRENT = require('../functions/2.0.0/gameLogic/setCurrent.js')
-        const CHECK_PITCH_CONDITIONS = require('../functions/2.0.0/gameLogic/checkPitchConditions.js')
+        const SET_CURRENT = require('../functions/2.0.0_OLD/gameLogic/setCurrent.js')
+        const CHECK_PITCH_CONDITIONS = require('../functions/2.0.0_OLD/gameLogic/checkPitchConditions.js')
 
         // - Draft -  
         const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js')

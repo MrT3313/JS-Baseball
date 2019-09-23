@@ -1,5 +1,5 @@
 // -- IMPORTS -- //
-    const RANDOM_NUMBER = require('../../2.0.0/helpers/randomNumGen.js')
+    const RANDOM_NUMBER = require('../../2.0.0_OLD/helpers/randomNumGen.js')
 
 // -- *** -- //
 

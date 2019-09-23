@@ -1,5 +1,5 @@
 
-const GAME_RULES = require('../config/rules.js')
+const GAME_RULES = require('../../config/rules.js')
 
 /* KEY
     === : Parent Object

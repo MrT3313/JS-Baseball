@@ -23,7 +23,7 @@ More specifically lets use this simulated baseball project to show the differenc
     - pitchResult
 
 
-### -x- Hello World -x- 0.0.0
+### Hello World - 0.0.0
 - Prototypal Inheritance Structure
 - Team Universe & Player Universe
 - Player Draft & Team Draft
@@ -41,7 +41,6 @@ Game Object:
     { 
         eventName = attrs,
         weather = attrs,
-        -- * --
         gameTime = attrs,
         endTime = attrs,
         -- * --
@@ -102,6 +101,7 @@ Team Object
         user = attrs,
         city  = attrs,
         name  = attrs,
+        -- * -- 
         teamPlayers = [],
         battingOrder_index = 0 
 
