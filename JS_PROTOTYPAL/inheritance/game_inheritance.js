@@ -20,7 +20,7 @@ function GameObject(game_attrs) {
     this.inningArray = []
 
     // -- Game Object prototype -- //
-        // Start Game //
+        // - 1 - // Start Game
             GameObject.prototype.startGame = () => {
                 this.makeInning()
                 // this.makeHalfInning()
@@ -29,11 +29,20 @@ function GameObject(game_attrs) {
             }
         // Make Inning //
             GameObject.prototype.makeInning = () => {
-                // console.log('Inside Make Inninng')
+                // - 1 - // Make Inning
                 const newInning = new Inning(this)
                 this.inningArray.push(newInning)
 
+                // - 2 - // Make Half Inning 
+                /*  
+                    Upon every new INNING made you will ALWAYS 
+                    need to add a first half inning
+                */
                 this.makeHalfInning()
+                /*  
+                    Upon every new HALF_INNING made you will ALWAYS 
+                    need to add a first ATBAT
+                */
                 // this.makeAtBat()
             }
         // Make HalfInning //
@@ -79,7 +88,7 @@ function GameObject(game_attrs) {
             // GameObject.call(this, inning_attrs) 
             this.inningTime = new Date()
             this.halfInningArray = []
-        return this}
+        }
 
         // -- Inning prototype -- //
             Inning.prototype = Object.create(GameObject.prototype);
@@ -106,7 +115,7 @@ function GameObject(game_attrs) {
     // - 3 - // atBat
         function AtBat(atBat_attrs) {
             console.log('--- Starting At Bat ---')
-            this.AtBatTime = new Date()
+            this.atBatTime = new Date()
             this.pitchCounter = {
                 balls: 0,
                 strikes: 0,
@@ -161,9 +170,21 @@ function GameObject(game_attrs) {
                     current_AtBat.pitchCounter.strikes += 1
                 }
 
-
             return current_AtBat}
 
+            AtBat.prototype.checkPitchCount = () => {
+                
+            }
+    
+    // - 4 - // activeFielders
+        function Active_Fielders() {
+
+        }
+
+    // - 5 - // activeBaseRunners
+        function Active_BaseRunners() {
+
+        }
 // -- *** -- //
 // -- *** -- //
 
