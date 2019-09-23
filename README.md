@@ -9,7 +9,19 @@ More specifically lets use this simulated baseball project to show the differenc
 <hr>
 
 ## Versions
-### -x- Live Version -x- 1.0.0 
+### 1.0.1
+- Inheritance Updated w/ test script
+- Loop based simulation
+
+### 1.0.0 
+- Draft Teams
+- Draft Roster
+- Start Game
+- Set Current
+    - inning / halfInning / atBat / Batter / Pitcher
+    - activePitch / activeSwing
+    - pitchResult
+
 
 ### -x- Hello World -x- 0.0.0
 - Prototypal Inheritance Structure
