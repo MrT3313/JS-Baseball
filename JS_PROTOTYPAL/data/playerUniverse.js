@@ -98,7 +98,7 @@
         // -- Comical -- //
         {
             firstName: 'Mascot', lastName: undefined,
-            number: 00,
+            number: 100,
             stats: {
                 power: 5,
                 skill: 5
@@ -293,9 +293,16 @@
 // -- *** -- //
 // -- *** -- //
 
-// -- EXPORTS -- //
-    module.exports = {
-        default_array,
-        pitchers_Array,
-        dh_array
-    }
+// -*- ES6 EXPORTS -*- //
+export default {
+    default_array,
+    pitchers_Array,
+    dh_array
+}
+
+// -*- NODE EXPORTS -*- //
+// module.exports = {
+    default_array,
+    pitchers_Array,
+    dh_array
+// }

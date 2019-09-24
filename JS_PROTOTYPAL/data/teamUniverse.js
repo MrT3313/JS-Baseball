@@ -26,5 +26,12 @@
 // -- *** -- //
 // -- *** -- //
 
-// -- EXPORTS -- //
-    module.exports = teams_array
+// -*- ES6 EXPORTS -*- //
+export default {
+    teams_array
+}
+
+// -*- NODE EXPORTS -*- //
+// module.exports = {
+
+// }

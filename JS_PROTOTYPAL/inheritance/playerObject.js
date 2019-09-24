@@ -78,10 +78,18 @@
 
 // -*- ES6 EXPORTS -*- //
 export default {
-    MAIN_playerObject
+    MAIN_playerObject,
+    SUB_playerObject_infielder,
+    SUB_playerObject_outfielder,
+    SUB_playerObject_dh,
+    SUB_playerObject_pitcher,
 }
 
 // -*- NODE EXPORTS -*- //
 // module.exports = {
-//     MAIN_playerObject
+    // MAIN_playerObject,
+    // SUB_playerObject_infielder,
+    // SUB_playerObject_outfielder,
+    // SUB_playerObject_dh,
+    // SUB_playerObject_pitcher,
 // }
