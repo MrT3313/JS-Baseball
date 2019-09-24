@@ -14,7 +14,8 @@ console.log(
         import ES6_INHERITANCE_gameObject from '../inheritance/gameObject.js'
         import ES6_INHERITANCE_teamObject from '../inheritance/teamObject.js'
         import ES6_INHERITANCE_playerObject from '../inheritance/playerObject.js'
-        // - Inheritance - //
+        // - Function - //
+        import ES6_QUERY_numHumanPlayers from '../functions/QUERY_numHumanPlayers.js'
         import ES6_FUNCTIONS_fillTeamUniverse from '../functions/draftLogic/RUN_fillTeamUniverse.js'
         import ES6_FUNCTIONS_fillPlayerUniverse from '../functions/draftLogic/RUN_fillPlayerUniverse.js'
         // - Data - //
@@ -31,7 +32,7 @@ console.log('=== === START SIMULATION === ===')
 
 console.log('=== === FILL TEAM UNIVERSE === ===')
 const teamUniverse = ES6_FUNCTIONS_fillTeamUniverse.fillTeamUniverse(ES6_DATA_teamUniverse.teams_array)
-    console.log('teamUniverse', teamUniverse)  
+    console.log('-X- teamUniverse -X-', teamUniverse)  
 
 
 console.log('=== === FILL PLAYER UNIVERSE === ===')
@@ -50,10 +51,11 @@ console.log('=== === FILL PLAYER UNIVERSE === ===')
         ES6_DATA_playerUniverse.outfield_array
     ]
     const playerUniverse = ES6_FUNCTIONS_fillPlayerUniverse.fillPlayerUniverse(array_of_playerPositions)
-        console.log('playerUniverse', playerUniverse)
+        console.log('-X- playerUniverse -X-', playerUniverse)
 
 console.log('=== === DEFINING PLAYER TYPES === ===')
-
+    const numHumanPlayers = ES6_QUERY_numHumanPlayers.QUERY_numHumanPlayers()
+        console.log('-X- numHumanPlayers -X-', numHumanPlayers)
 console.log('=== === DRAFT TEAMS === ===')
 
 console.log('=== === DRAFT PLAYERS === ===')
