@@ -6,8 +6,11 @@
 
 
 
-const RUN_draftPlayer = () => {
+const RUN_draftPlayer = (numHumanPlayers, playerUniverse) => {
     console.log('-X- insideRUN_draftPlayer -X-')
+    // --*-- //
+    
+
 }
 
 // -*- ES6 EXPORTS -*- //

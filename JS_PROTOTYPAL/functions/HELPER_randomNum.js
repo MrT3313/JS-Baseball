@@ -1,7 +1,5 @@
 const randomNumber = (top,bottom) => {
-    const result = Math.floor((Math.random() * top) + bottom)
-        console.log('result', result)
-    return result
+    return Math.round(Math.random() * (top - bottom) + bottom);
 }
 
 // -*- ES6 EXPORTS -*- //
