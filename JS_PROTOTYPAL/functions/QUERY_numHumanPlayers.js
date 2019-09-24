@@ -15,10 +15,8 @@ const QUERY_numHumanPlayers = (param) => {
         default:
             console.log('Enter number between 0 & 2')
             break;
-        
     }
 return numberOfPlayers}
-
 
 // -*- ES6 EXPORTS -*- //
 export default {

@@ -21,12 +21,13 @@
     */
 
     function MAIN_gameObject(game_attrs) {
-        this.eventName = game_attrs.eventName
-        this.weather = game_attrs.weather
-        this.gameTime = game_attrs.gameTime
-        this.endTime = game_attrs.endTime
+        this.eventName = '!! FIRST GAME !!'
+        this.weather = 'Sunny'
+        this.gameTime = new Date()
+        this.endTime = undefined
         // --*-- //
         this.inningsArray = []
+        this.activeTeams = []
     }
 
     // -- Prototype -- //
