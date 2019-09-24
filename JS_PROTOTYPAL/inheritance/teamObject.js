@@ -21,10 +21,10 @@
     */
 
     function MAIN_teamObject(team_attrs) {
-        this.user = team_attrs.user
         this.city = team_attrs.city
         this.name = team_attrs.name
         // --*-- //
+        this.user = undefined
         this.homeTeam = undefined
         this.teamPlayers = []
         this.battingOrder_index = 0

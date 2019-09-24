@@ -5,7 +5,7 @@
 // -- *** -- //
 
 // -- Pitchers -- //
-    const pitchers_Array = [
+    const pitchers_array = [
         {
             firstName: 'Babe', lastName: 'Ruth',
             number: 3,
@@ -17,6 +17,7 @@
             pitches: {
                 fastball: 90,
             },
+            // position: 'pitcher'
         },
         {
             firstName: 'Pedro', lastName: 'Martinez',
@@ -29,6 +30,7 @@
             pitches: {
                 fastball: 90,
             },
+            // position: 'pitcher'
         },
         {
             firstName: 'Roger', lastName: 'Clemens',
@@ -41,6 +43,7 @@
             pitches: {
                 fastball: 90,
             },
+            // position: 'pitcher'
         },
         {
             firstName: 'Cy', lastName: 'Young',
@@ -53,6 +56,7 @@
             pitches: {
                 fastball: 90,
             },
+            // position: 'pitcher'
         },
         {
             firstName: 'Randy', lastName: 'Johnson',
@@ -65,6 +69,7 @@
             pitches: {
                 fastball: 90,
             },
+            // position: 'pitcher'
         },
     ]
 // -- *** -- //
@@ -79,6 +84,7 @@
                 power: 100,
                 skill: 70,
             },
+            // position: 'dh'
         },
         {
             firstName: 'Vladimir', lastName: 'Guerrero',
@@ -87,14 +93,15 @@
                 power: 100,
                 skill: 70,
             },
-        }
+            // position: 'dh'
+        },
     ]
 
 // -- *** -- //
 // -- *** -- //
 
 // -- DEFAULT -- // 
-    const default_array = [
+    const infield_array = [
         // -- Comical -- //
         {
             firstName: 'Mascot', lastName: undefined,
@@ -103,7 +110,7 @@
                 power: 5,
                 skill: 5
             },
-            position: 'infield'
+            // position: 'infield'
         },        
         {
             firstName: 'Bat-Boy', lastName: undefined,
@@ -112,7 +119,7 @@
                 power: 10,
                 skill: 10
             },
-            position: 'infield'
+            // position: 'infield'
         },    
         {
             firstName: 'StreakingFan', lastName: undefined,
@@ -121,7 +128,7 @@
                 power: 50,
                 skill: 0
             },
-            position: 'infield'
+            // position: 'infield'
         },          
         // -- Infield -- //
         {
@@ -131,7 +138,7 @@
                 power: 70,
                 skill: 70
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Derek', lastName: 'Jeter',
@@ -140,7 +147,7 @@
                 power: 80,
                 skill: 90
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Reed', lastName: 'Turgeon',
@@ -149,7 +156,7 @@
                 power: 100,
                 skill: 100
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Yogi', lastName: 'Berra',
@@ -158,7 +165,7 @@
                 power: 70,
                 skill: 70
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Albert', lastName: 'Pujols',
@@ -167,7 +174,7 @@
                 power: 99,
                 skill: 80
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Lou', lastName: 'Gehrig',
@@ -176,7 +183,7 @@
                 power: 70,
                 skill: 70
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Derek', lastName: 'Jeter',
@@ -185,7 +192,7 @@
                 power: 80,
                 skill: 100
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Cal', lastName: 'Ripken Jr.',
@@ -194,7 +201,7 @@
                 power: 80,
                 skill: 100
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Wade', lastName: 'Boggs',
@@ -203,7 +210,7 @@
                 power: 80,
                 skill: 100
             },
-            position: 'infield'
+            // position: 'infield'
         },
         {
             firstName: 'Jackie', lastName: 'Robinson',
@@ -212,8 +219,11 @@
                 power: 80,
                 skill: 100
             },
-            position: 'infield'
+            // position: 'infield'
         },
+    ]
+    
+    const outfield_array = [
         // -- Outfield -- //
         {
             firstName: 'Manny', lastName: 'Ramirez',
@@ -222,7 +232,7 @@
                 power: 95,
                 skill: 90
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Ted', lastName: 'Williams',
@@ -231,7 +241,7 @@
                 power: 95,
                 skill: 90
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Mike', lastName: 'Trout',
@@ -240,7 +250,7 @@
                 power: 93,
                 skill: 93
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Bryce', lastName: 'Harper',
@@ -249,7 +259,7 @@
                 power: 93,
                 skill: 93
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Willie', lastName: 'Mays',
@@ -258,7 +268,7 @@
                 power: 70,
                 skill: 70
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Mickey', lastName: 'Mantle',
@@ -267,7 +277,7 @@
                 power: 70,
                 skill: 70
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Ken', lastName: 'Griffey Jr.',
@@ -276,7 +286,7 @@
                 power: 70,
                 skill: 70
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
         {
             firstName: 'Hank', lastName: 'Aaron',
@@ -285,9 +295,8 @@
                 power: 70,
                 skill: 70
             },
-            position: 'outfield'
+            // position: 'outfield'
         },
-
     ]
 
 // -- *** -- //
@@ -295,14 +304,16 @@
 
 // -*- ES6 EXPORTS -*- //
 export default {
-    default_array,
-    pitchers_Array,
+    infield_array,
+    outfield_array,
+    pitchers_array,
     dh_array
 }
 
 // -*- NODE EXPORTS -*- //
 // module.exports = {
-    default_array,
-    pitchers_Array,
+    infield_array,
+    outfield_array,
+    pitchers_array,
     dh_array
 // }
