@@ -6,18 +6,14 @@
     // -B- // Node Imports
 
 
-const RUN_draftTeam = (numHumanPlayers, teamUniverse) => {
+const RUN_draftTeams = (numHumanPlayers, teamUniverse) => {
     console.log('-X- insideRUN_draftTeam -X-')
-    // ES6_FUNCTIONS_computerPick.RUN_computerDraftPick()
-    // ES6_FUNCTIONS_userPick.RUN_userDraftPick()
     // --*-- //
-
     let DRAFT_teamUniverse = teamUniverse
-        // console.log('-*- draftTeamUniverse -*-', DRAFT_teamUniverse)
     let computerPickResult = undefined
     let pick_1 = undefined
     let pick_2 = undefined
-
+    // --*-- //
         switch(numHumanPlayers) {
             case 0:
                 console.log('-*- 0 Humans -*-')
@@ -81,7 +77,7 @@ return [pick_1, pick_2]}
 
 // -*- ES6 EXPORTS -*- //
 export default {
-    RUN_draftTeam
+    RUN_draftTeams
 }
 
 // -*- NODE EXPORTS -*- //

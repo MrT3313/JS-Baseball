@@ -9,7 +9,7 @@ const RUN_computerDraftPick = (pickUniverse) => {
     console.log('-*- computer pickUniverse -*-', pickUniverse)
 
     const randomMin = 0
-    const randomMax = pickUniverse.length
+    const randomMax = pickUniverse.length - 1
         console.log(randomMin, randomMax)
 
     const randomNumber = ES6_HELPER_randomNum.randomNumber(randomMin, randomMax)

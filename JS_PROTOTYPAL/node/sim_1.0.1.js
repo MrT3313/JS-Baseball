@@ -18,7 +18,8 @@ console.log(
         // - Function - //
         import ES6_QUERY_numHumanPlayers from '../functions/QUERY_numHumanPlayers.js'
         import ES6_FUNCTIONS_startGame from '../functions/RUN_startGame.js'
-        import ES6_FUNCTIONS_draftTeam from '../functions/RUN_draftTeams.js'
+        import ES6_FUNCTIONS_draftTeams from '../functions/RUN_draftTeams.js'
+        import ES6_FUNCTIONS_draftPlayers from '../functions/RUN_draftPlayers.js'
 
 
         import ES6_FUNCTIONS_fillTeamUniverse from '../functions/draftLogic/RUN_fillTeamUniverse.js'
@@ -67,13 +68,14 @@ console.log('=== === CREATE GAME === ===')
         console.log(todaysGame)
 
 console.log('=== === DRAFT TEAMS === ===')
-    const todaysCompetition = ES6_FUNCTIONS_draftTeam.RUN_draftTeam(numHumanPlayers, teamUniverse)
+    const todaysCompetition = ES6_FUNCTIONS_draftTeams.RUN_draftTeams(numHumanPlayers, teamUniverse)
         // console.log('=== todaysCompetition ===',todaysCompetition)
 
     todaysCompetition.forEach(team => todaysGame.activeTeams.push(team))
         console.log('=== todaysGame ===',todaysGame)
 
 console.log('=== === DRAFT PLAYERS === ===')
+    ES6_FUNCTIONS_draftPlayers.RUN_draftPlayers(numHumanPlayers, playerUniverse)
 
 console.log('=== === START GAME === ===')
     // WHILE inningArray.length > 9
