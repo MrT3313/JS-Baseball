@@ -1,4 +1,5 @@
 # Global settings applied to the whole site.
 [build]
+  base = "hostedContainer/"
+  publish = "public/"
   command = "npm start"
-  publish = "public"

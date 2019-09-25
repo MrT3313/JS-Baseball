@@ -1,7 +1,7 @@
 // -*- IMPORTS -*- //
     // -A- // ES6 Imports
-        import ES6_FUNCTIONS_userPick from '../functions/draftLogic/RUN_userDraftPick.js'
-        import ES6_FUNCTIONS_computerPick from '../functions/draftLogic/RUN_computerDraftPick.js'
+        import ES6_FUNCTIONS_userPick from './draftLogic/RUN_userDraftPick.js'
+        import ES6_FUNCTIONS_computerPick from './draftLogic/RUN_computerDraftPick.js'
         import ES6_INHERITANCE_teamObject from '../inheritance/teamObject.js'
     // -B- // Node Imports
 
