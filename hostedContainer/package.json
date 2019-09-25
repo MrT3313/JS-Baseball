@@ -2,7 +2,7 @@
   "name": "js-baseball",
   "version": "1.0.0",
   "description": "Lets talk baseball!",
-  "main": "JS_PROTOTYPAL/node/index.js",
+  "main": "/public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm start"
@@ -12,7 +12,7 @@
     "url": "git+https://github.com/MrT3313/JS-Baseball.git"
   },
   "author": "",
-  "license": "UNLICENSED",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/MrT3313/JS-Baseball/issues"
   },

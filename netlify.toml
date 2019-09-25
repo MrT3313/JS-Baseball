@@ -1,5 +1,10 @@
 # Global settings applied to the whole site.
 [build]
   base = "hostedContainer/"
-  publish = "/public"
+  publish = "hostedContainer/start"
   command = "npm start"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
