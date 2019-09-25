@@ -3,8 +3,3 @@
   base = "hostedContainer/"
   publish = "hostedContainer/start"
   command = "npm start"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
