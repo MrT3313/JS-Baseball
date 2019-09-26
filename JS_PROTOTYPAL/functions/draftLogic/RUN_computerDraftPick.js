@@ -1,6 +1,6 @@
 // -*- IMPORTS -*- //
     // -A- // ES6 Imports
-    import ES6_HELPER_randomNum from '../HELPER_randomNum.js'
+    import ES6_HELPER_randomNum from '../HELPER_randomNum.js.js'
 // -B- // Node Imports
 
 

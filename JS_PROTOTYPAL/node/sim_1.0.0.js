@@ -1,24 +1,24 @@
 // -- IMPORTS -- // 
     // Inheritance
-        const GAME_INHERITANCE = require('../inheritance/OLD/game_inheritance.js/index.js')
+        const GAME_INHERITANCE = require('../inheritance/OLD/game_inheritance.js/index.js.js')
 
     // Data 
-        const TEAM_UNIVERSE = require('../data/teamUniverse.js')
-        const PLAYERS_UNIVERSE = require('../data/playerUniverse.js')
+        const TEAM_UNIVERSE = require('../data/teamUniverse.js.js')
+        const PLAYERS_UNIVERSE = require('../data/playerUniverse.js.js')
     
     // Functions
-        const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js')
-        const QUERYUSER_numHumanPlayers = require('../functions/1.0.0_OLD/general/queryUser_numPlayers.js.js')
-        const GET_ROSTER = require('../functions/structure/roster.js') 
-        const CREATE_GAMEOBJECT = require('../functions/structure/createGameObject.js')
+        const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js.js')
+        const QUERYUSER_numHumanPlayers = require('../functions/1.0.0_OLD/general/queryUser_numPlayers.js.js.js')
+        const GET_ROSTER = require('../functions/structure/roster.js.js') 
+        const CREATE_GAMEOBJECT = require('../functions/structure/createGameObject.js.js')
             // console.log('************************',CREATE_GAMEOBJECT)
-        const BATTING_ORDER = require('../functions/structure/battingOrder.js')
-        const SET_CURRENT = require('../functions/2.0.0_OLD/gameLogic/setCurrent.js')
-        const CHECK_PITCH_CONDITIONS = require('../functions/2.0.0_OLD/gameLogic/checkPitchConditions.js')
+        const BATTING_ORDER = require('../functions/structure/battingOrder.js.js')
+        const SET_CURRENT = require('../functions/2.0.0_OLD/gameLogic/setCurrent.js.js')
+        const CHECK_PITCH_CONDITIONS = require('../functions/2.0.0_OLD/gameLogic/checkPitchConditions.js.js')
 
         // - Draft -  
-        const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js')
-        const DRAFT_PLAYERS = require('../functions/structure/draftLogic/draftPlayers.js')
+        const DRAFT_TEAMS = require('../functions/structure/draftLogic/draftTeams.js.js')
+        const DRAFT_PLAYERS = require('../functions/structure/draftLogic/draftPlayers.js.js')
 
 // -- *** -- //
 // -- *** -- START CODE -- *** -- //

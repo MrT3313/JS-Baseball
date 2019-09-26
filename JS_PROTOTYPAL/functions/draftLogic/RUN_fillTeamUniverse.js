@@ -1,7 +1,7 @@
 // -*- IMPORTS -*- //
     // -A- // ES6 Imports
-    import ES6_INHERITANCE_teamUniverse from '../../inheritance/teamObject.js'
-    import ES6_DATA_teamUniverse from '../../data/teamUniverse.js'
+    import ES6_INHERITANCE_teamUniverse from '../../inheritance/teamObject.js.js'
+    import ES6_DATA_teamUniverse from '../../data/teamUniverse.js.js'
     // -B- // Node Imports
     // const NODE_teamUniverse = require('../../data/teamUniverse.js')
 

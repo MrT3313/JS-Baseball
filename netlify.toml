@@ -1,5 +1,5 @@
 # Global settings applied to the whole site.
 [build]
-  base = "hostedContainer/"
-  publish = "hostedContainer/start"
-  command = "npm start"
+  base = "JS-Baseball/"
+  publish = "JS-Baseball/public"
+  command = "npm build"
