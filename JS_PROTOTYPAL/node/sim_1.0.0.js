@@ -8,7 +8,7 @@
     
     // Functions
         const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js')
-        const QUERYUSER_numHumanPlayers = require('../functions/1.0.0_OLD/general/queryUser_numPlayers.js')
+        const QUERYUSER_numHumanPlayers = require('../functions/1.0.0_OLD/general/queryUser_numPlayers.js.js.js')
         const GET_ROSTER = require('../functions/structure/roster.js') 
         const CREATE_GAMEOBJECT = require('../functions/structure/createGameObject.js')
             // console.log('************************',CREATE_GAMEOBJECT)
