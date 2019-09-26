@@ -1,7 +1,7 @@
 // -*- IMPORTS -*- //
     // -A- // ES6 Imports
     import ES6_INHERITANCE_playerObject from '../../inheritance/playerObject.js'
-    import ES6_DATA_playerUniverse from '../../../data/playerUniverse.js'
+    import ES6_DATA_playerUniverse from '../../data/playerUniverse.js'
 
     // -B- // Node Imports
     // const NODE_playerUniverse = require('../../data/playerUniverse.js')

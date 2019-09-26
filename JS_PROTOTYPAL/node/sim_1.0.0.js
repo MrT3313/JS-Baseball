@@ -3,8 +3,8 @@
         const GAME_INHERITANCE = require('../inheritance/OLD/game_inheritance.js/index.js')
 
     // Data 
-        const TEAM_UNIVERSE = require('../../data/teamUniverse.js')
-        const PLAYERS_UNIVERSE = require('../../data/playerUniverse.js')
+        const TEAM_UNIVERSE = require('../data/teamUniverse.js')
+        const PLAYERS_UNIVERSE = require('../data/playerUniverse.js')
     
     // Functions
         const FILL_UNIVERSE = require('../functions/structure/fillUniverse.js')

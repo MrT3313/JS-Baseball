@@ -12,21 +12,21 @@ console.log(
 // -*- IMPORTS -*- //
         // -A- // ES6 Imports
         // - Inheritance - //
-        import ES6_INHERITANCE_gameObject from '../public/inheritance/gameObject.js'
-        import ES6_INHERITANCE_teamObject from '../public/inheritance/teamObject.js'
-        import ES6_INHERITANCE_playerObject from '../public/inheritance/playerObject.js'
+        import ES6_INHERITANCE_gameObject from '../inheritance/gameObject.js'
+        import ES6_INHERITANCE_teamObject from '../inheritance/teamObject.js'
+        import ES6_INHERITANCE_playerObject from '../inheritance/playerObject.js'
         // - Function - //
         import ES6_QUERY_numHumanPlayers from '../functions/QUERY_numHumanPlayers.js'
-        import ES6_FUNCTIONS_startGame from '../public/functions/RUN_startGame.js'
-        import ES6_FUNCTIONS_draftTeams from '../public/functions/RUN_draftTeams.js'
-        import ES6_FUNCTIONS_draftPlayers from '../public/functions/RUN_draftPlayers.js'
+        import ES6_FUNCTIONS_startGame from '../functions/RUN_startGame.js'
+        import ES6_FUNCTIONS_draftTeams from '../functions/RUN_draftTeams.js'
+        import ES6_FUNCTIONS_draftPlayers from '../functions/RUN_draftPlayers.js'
 
 
-        import ES6_FUNCTIONS_fillTeamUniverse from '../public/functions/draftLogic/RUN_fillTeamUniverse.js'
-        import ES6_FUNCTIONS_fillPlayerUniverse from '../public/functions/draftLogic/RUN_fillPlayerUniverse.js'
+        import ES6_FUNCTIONS_fillTeamUniverse from '../functions/draftLogic/RUN_fillTeamUniverse.js'
+        import ES6_FUNCTIONS_fillPlayerUniverse from '../functions/draftLogic/RUN_fillPlayerUniverse.js'
         // - Data - //
-        import ES6_DATA_teamUniverse from '../public/data/teamUniverse.js'
-        import ES6_DATA_playerUniverse from '../../data/playerUniverse.js'
+        import ES6_DATA_teamUniverse from '../data/teamUniverse.js'
+        import ES6_DATA_playerUniverse from '../data/playerUniverse.js'
     // -B- // Node Imports
         // const NODE_INHERITANCE_gameObject = require('../inheritance/gameObject.js')
         // const NODE_INHERITANCE_teamObject = '../inheritance/teamObject.js'

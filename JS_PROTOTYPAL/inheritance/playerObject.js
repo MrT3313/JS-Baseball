@@ -1,7 +1,7 @@
 // -*- IMPORTS -*- //
     // -1- // RULES
         // -A- // ES6 Imports
-        import ES6_gameRules from '../config/rules.js.js'
+        import ES6_gameRules from '../config/rules.js'
         // -B- // Node Imports
         // const NODE_gameRules = require('../config/rules.js')
 

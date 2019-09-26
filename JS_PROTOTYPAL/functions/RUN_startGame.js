@@ -1,6 +1,6 @@
 // -*- IMPORTS -*- //
     // -A- // ES6 Imports
-    import ES6_INHERITANCE_gameObject from '../inheritance/gameObject.js.js'
+    import ES6_INHERITANCE_gameObject from '../inheritance/gameObject.js'
 // -B- // Node Imports
 
 
