@@ -2,5 +2,5 @@
 [build]
   base = "PROTOTYPAL/"
   publish = "public/index.html"
-  command = 'npm build'
+  command = 'node index.js'
 
