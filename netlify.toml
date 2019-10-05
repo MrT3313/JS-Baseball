@@ -1,6 +1,6 @@
 # Global settings applied to the whole site.
 [build]
   base = "PROTOTYPAL/"
-  publish = "public/index.html"
+  publish = "public"
   command = 'npm build'
 
