@@ -1,6 +1,6 @@
 # Global settings applied to the whole site.
 [build]
   base = "client"
-  publish = "client/build"
-  command = 'npm start'
+  publish = "public"
+  command = 'npm build'
 
