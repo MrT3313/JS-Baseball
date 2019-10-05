@@ -10,8 +10,8 @@ require('dotenv').config()
     server.use(
         express.json(),
         // -*- //
-        express.static('public')
-        // express.status('src')
+        express.static('public'),
+        express.static('src'),
     )
 
 // ROOT ROUTE
