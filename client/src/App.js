@@ -38,7 +38,13 @@ function App() {
           <button onClick={createGame}>Start Game!</button>}
         
         {state === '=== Game Created ===' && 
-          <button>FUUU</button>}
+          <div>
+            <h2>{activeGame.eventName}</h2>
+            <p>
+              {`Game Time: ${activeGame.gameTime}`}
+            </p>
+          </div>
+        }
       </div>
     );
 }
