@@ -10,11 +10,14 @@ require('dotenv').config()
     server.use(
         express.json(),
         // -*- //
-        express.static('public'),
         express.static('src'),
+        express.static('public'),
     )
 
 // ROOT ROUTE
+    // server.get('/', (req,res) => {
+    //     res.send()
+    // })
 
 // EXPORTS
 module.exports = server
