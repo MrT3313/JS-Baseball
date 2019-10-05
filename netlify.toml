@@ -2,5 +2,5 @@
 [build]
   base = "client"
   publish = "client/build"
-  command = 'npm build'
+  command = 'npm start'
 
