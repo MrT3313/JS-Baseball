@@ -1,0 +1,25 @@
+{
+  "name": "js-baseball",
+  "version": "1.0.0",
+  "description": "Lets talk baseball!",
+  "main": "/public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start",
+    "build": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrT3313/JS-Baseball.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrT3313/JS-Baseball/issues"
+  },
+  "homepage": "https://github.com/MrT3313/JS-Baseball#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
+  }
+}
