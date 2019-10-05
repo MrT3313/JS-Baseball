@@ -5,14 +5,13 @@ require('dotenv').config()
     const server = express()
 
 // MIDDLEWARE
-    const cors = require('cors')
 
 // USE MIDDLEWARE
     server.use(
         express.json(),
-        cors(),
         // -*- //
-        express.status('public')
+        express.static('public')
+        // express.status('src')
     )
 
 // ROOT ROUTE

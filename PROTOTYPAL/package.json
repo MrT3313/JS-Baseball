@@ -5,7 +5,7 @@
   "main": "/public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "start",
+    "start": "",
     "build": "build"
   },
   "repository": {
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/MrT3313/JS-Baseball#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.1.0"
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1"
   }
 }
