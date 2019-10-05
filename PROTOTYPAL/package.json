@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/MrT3313/JS-Baseball/issues"
   },
-  "homepage": "https://github.com/MrT3313/JS-Baseball#readme"
+  "homepage": "https://github.com/MrT3313/JS-Baseball#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0"
+  }
 }
