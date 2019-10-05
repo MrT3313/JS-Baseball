@@ -16,11 +16,11 @@ const GAME_RULES = {
 // console.log(GAME_RULES)
 
 // -*- ES6 EXPORTS -*- //
-export default {
-    GAME_RULES
-}
-
-// -*- NODE EXPORTS -*- //
-// module.exports = {
+// export default {
 //     GAME_RULES
 // }
+
+// -*- NODE EXPORTS -*- //
+module.exports = {
+    GAME_RULES
+}

@@ -1,9 +1,9 @@
 // -*- IMPORTS -*- //
     // -1- // RULES
         // -A- // ES6 Imports
-        import ES6_gameRules from '../config/rules.js'
+        // import ES6_gameRules from '../config/rules.js'
         // -B- // Node Imports
-        // const NODE_gameRules = require('../config/rules.js')
+        const NODE_gameRules = require('../config/rules.js')
 
 // -*- KEY -*- //
     /* 
@@ -50,11 +50,11 @@
     }
 
 // -*- ES6 EXPORTS -*- //
-export default {
-    MAIN_teamObject
-}
-
-// -*- NODE EXPORTS -*- //
-// module.exports = {
+// export default {
 //     MAIN_teamObject
 // }
+
+// -*- NODE EXPORTS -*- //
+module.exports = {
+    MAIN_teamObject
+}

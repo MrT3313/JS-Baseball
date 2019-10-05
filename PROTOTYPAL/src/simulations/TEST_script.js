@@ -1,13 +1,13 @@
 // -*- IMPORTS -*- //
     // -1- // INHERITANCE
         // -A- // ES6 Imports
-            import ES6_INHERITANCE_gameObject from '../inheritance/gameObject.js'
-            import ES6_INHERITANCE_teamObject from '../inheritance/teamObject.js'
-            import ES6_INHERITANCE_playerObject from '../inheritance/playerObject.js'
+            // import ES6_INHERITANCE_gameObject from '../inheritance/gameObject.js'
+            // import ES6_INHERITANCE_teamObject from '../inheritance/teamObject.js'
+            // import ES6_INHERITANCE_playerObject from '../inheritance/playerObject.js'
         // -B- // Node Imports
-            // const NODE_INHERITANCE_gameObject = require('../inheritance/gameObject.js')
-            // const NODE_INHERITANCE_teamObject = '../inheritance/teamObject.js'
-            // const NODE_INHERITANCE_teamObject = '../inheritance/playerObject.js'
+            const NODE_INHERITANCE_gameObject = require('../inheritance/gameObject.js')
+            const NODE_INHERITANCE_teamObject = '../inheritance/teamObject.js'
+            const NODE_INHERITANCE_playerObject = '../inheritance/playerObject.js'
 
 // -*- TEST DATA -*- //
     // -1- // Test Game
@@ -102,24 +102,24 @@ TODO: // Test Half Inning
 // -*- TESTS -*- //
     // -1- // INHERITANCE
         // -A- // ES6 Imports
-            const ES6_testGame = new ES6_INHERITANCE_gameObject.MAIN_gameObject(testTemplate_gameObject)
-                console.log('ES6_testGame', ES6_testGame)
-            const ES6_testTeam = new ES6_INHERITANCE_teamObject.MAIN_teamObject(testTemplate_teamObject)
-                console.log('ES6_testTeam', ES6_testTeam)
-            // --*-- //
-            const ES6_testPlayer = new ES6_INHERITANCE_playerObject.MAIN_playerObject(testTemplate_Player)
-                console.log('ES6_testPlayer', ES6_testPlayer)
+            // const ES6_testGame = new ES6_INHERITANCE_gameObject.MAIN_gameObject(testTemplate_gameObject)
+            //     console.log('ES6_testGame', ES6_testGame)
+            // const ES6_testTeam = new ES6_INHERITANCE_teamObject.MAIN_teamObject(testTemplate_teamObject)
+            //     console.log('ES6_testTeam', ES6_testTeam)
+            // // --*-- //
+            // const ES6_testPlayer = new ES6_INHERITANCE_playerObject.MAIN_playerObject(testTemplate_Player)
+            //     console.log('ES6_testPlayer', ES6_testPlayer)
 
-            const ES6_testPitcher = new ES6_INHERITANCE_playerObject.SUB_playerObject_pitcher(testTemplate_Pitcher)
-                console.log('ES6_testPitcher', ES6_testPitcher)
-            const ES6_testInfielder = new ES6_INHERITANCE_playerObject.SUB_playerObject_infielder(testTemplate_Infielder)
-                console.log('ES6_testInfielder', ES6_testInfielder)
-            const ES6_testOutfielder = new ES6_INHERITANCE_playerObject.SUB_playerObject_outfielder(testTemplate_Outfielder)
-                console.log('ES6_testOutfielder', ES6_testOutfielder)
-            const ES6_testDH = new ES6_INHERITANCE_playerObject.SUB_playerObject_dh(testTemplate_DH)
-                console.log('ES6_testDH', ES6_testDH)
+            // const ES6_testPitcher = new ES6_INHERITANCE_playerObject.SUB_playerObject_pitcher(testTemplate_Pitcher)
+            //     console.log('ES6_testPitcher', ES6_testPitcher)
+            // const ES6_testInfielder = new ES6_INHERITANCE_playerObject.SUB_playerObject_infielder(testTemplate_Infielder)
+            //     console.log('ES6_testInfielder', ES6_testInfielder)
+            // const ES6_testOutfielder = new ES6_INHERITANCE_playerObject.SUB_playerObject_outfielder(testTemplate_Outfielder)
+            //     console.log('ES6_testOutfielder', ES6_testOutfielder)
+            // const ES6_testDH = new ES6_INHERITANCE_playerObject.SUB_playerObject_dh(testTemplate_DH)
+            //     console.log('ES6_testDH', ES6_testDH)
         
             
         // -B- // Node Imports
-            // const NODE_testGame = new NODE_INHERITANCE_gameObject.MAIN_gameObject(testTemplate_teamObject)
-                // console.log('NODE_testGame', NODE_testGame)
+            const NODE_testGame = new NODE_INHERITANCE_gameObject.MAIN_gameObject(testTemplate_teamObject)
+                console.log('NODE_testGame', NODE_testGame)
