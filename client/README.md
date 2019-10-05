@@ -9,6 +9,8 @@ More specifically lets use this simulated baseball project to show the differenc
 <hr>
 
 ## Versions
+### 1.0.2
+- Hosted CRA 
 ### 1.0.1
 - Inheritance Updated w/ test script
 - Loop based simulation
