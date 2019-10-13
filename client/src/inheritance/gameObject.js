@@ -23,7 +23,7 @@
     function MAIN_gameObject(game_attrs) {
         this.eventName = '!! FIRST GAME !!'
         this.weather = 'Sunny'
-        this.gameTime = new Date()
+        this.gameTime = this.formatDate(new Date())
         this.endTime = undefined
         // --*-- //
         this.inningsArray = []
@@ -31,10 +31,15 @@
     }
 
     // -- Prototype -- //
+    MAIN_gameObject.prototype.formatDate = function(fullDate) {
+        console.log(fullDate)
+        let result = `${fullDate.getMonth() + 1}/${fullDate.getDate()}/${fullDate.getFullYear()}`
+            console.log(result)
+        return result
+    }
     MAIN_gameObject.prototype.CHECK_inningsArray = () => {
         
     }
-    // -- * -- //
     MAIN_gameObject.prototype.RUN_startGame = () => {
 
     }

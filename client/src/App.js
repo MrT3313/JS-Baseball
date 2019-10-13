@@ -9,24 +9,24 @@ import RUN_startGame from './functions/RUN_startGame.js'
 // IMPORT ACTION CREATORS
 import {a_createGame} from './redux/actions/a_createGame.js'
 
+// COMPONENTS
+import GameDisplay from './views/GameDisplay.js'
+
 // STYLED COMPONENTS
 const APP_CONTAINER = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  button {
-    margin: 10px;
-  }
 `;
 
 // COMPONENT TO EXPORT
-function App(props) {
-  console.log(props)
-  console.log(props.a_createGame)
+function App(props, {activeGame}) {
+  // console.log(props)
+  // console.log(props.a_createGame)
   // console.log('activeGame',activeGame)
+  // console.log('activeGame',props.activeGame)
   // -- //
-  const helper_createGame = e => {
+  const helper_createGame = () => {
     let result = RUN_startGame.RUN_startGame()
       // console.log(result)
 
@@ -35,16 +35,14 @@ function App(props) {
   // -- //
   return (
     <APP_CONTAINER className="App">
-      <div>Welcome to Todays Game!</div>
+      <h1>Welcome to Todays Game!</h1>
       {!props.activeGame &&
         <button
           onClick={helper_createGame}
         >Create Todays Game</button>
       }
       {props.activeGame &&
-        <div>
-          SHOW GAME INFO
-        </div>
+        <GameDisplay />
       }
     </APP_CONTAINER>
   );
@@ -53,7 +51,7 @@ function App(props) {
 // MAP STATE TO PROPS
 const mapStateToProps = state => {
   return {
-    activeGame: state.activeGame
+    activeGame: state.ACTIVE_GAME.activeGame
   }
 }
 

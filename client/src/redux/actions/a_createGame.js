@@ -1,5 +1,6 @@
 // IMPORT FUNCTIONS
-// import RUN_startGame from '../../functions/RUN_startGame.js'
+    // import RUN_startGame from '../../functions/RUN_startGame.js'
+
 // CREATE ACTION TYPES
     export const CREATE_GAME_START = 'CREATE_GAME_START'
     export const CREATE_GAME_SUCCESS = 'CREATE_GAME_SUCCESS'
@@ -10,7 +11,7 @@ export const a_createGame = (result) => dispatch => {
     // console.log(result)
     // -- //
         // -1- // FIRST Action
-        dispatch({ type: CREATE_GAME_START}) // WORKING 
+        dispatch({ type: CREATE_GAME_START}) 
         
         if(result) {
             // -2- // SECOND Action 
