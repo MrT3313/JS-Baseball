@@ -7,23 +7,32 @@
         display: flex;
         justify-content: center;
 
+        margin-top: 5px;
+
         border-radius: 10px;
-
-        width: 25%;
-
         border: 1px solid orange;
     `;
 
 // - COMPONENT TO EXPORT - //
-    function Button(props) {
-        console.log(props)
+    function Button(params) {
+        console.log('<Button />',params)
+        // -- * -- //
+        const handleClick = e => {
+            e.preventDefault()
+            console.log(params.id)
+            if (!params.id) {
+                params.buttonFunction(params.buttonText)
+            } else {
+                params.buttonFunction(params.id)
+            }
+        }
         // -- * -- //
         return (
             <ButtonContainer
-                onClick={props.buttonFunction}
+                onClick={handleClick}
             >
                 <p>
-                    {props.buttonText}
+                    {params.buttonText}
                 </p>
             </ButtonContainer>
         )

@@ -16,6 +16,7 @@ import styled from 'styled-components'
   import GameSummary from './components/GameSummary.js'
   import Button from './components/Button.js'
   import DraftContainer from './components/DraftContainer.js'
+  import NumInput from './components/UserNumInput.js'
 // - Scripts - //
   import activeScript from './simulations/sim_1.0.2.js'
 
@@ -38,76 +39,125 @@ function App() {
     // -- // 
     const [teamUniverse, setTeamUniverse] = useState()
     const [playerUniverse, setPlayerUniverse] = useState()
+    // -- //
+    const [numHumanPlayers, setHumanPlayers] = useState(undefined)
+
+// -- ** -- ** -- ** //
+// -- ** -- ** -- ** //
 
   // - METHODS - //
-    const createGame = e => {
-      const result = ES6_FUNCTIONS_startGame.RUN_startGame()
-      setActiveGame(result)
-      // -- * -- //
-      setState('=== Game Created ===')
-    }
-    const fillUniverse = e => {
-      const teamsResult = ES6_FUNCTIONS_fillTeamUniverse.fillTeamUniverse(ES6_DATA_teamUniverse)
-        setTeamUniverse(teamsResult)
-        
-      const playersResult = ES6_FUNCTIONS_fillPlayerUniverse.fillPlayerUniverse(ES6_DATA_playerUniverse)
-        setPlayerUniverse(playersResult)  
-      // -- * -- //
-      setState('=== Universe Filled ===')
-    }
-    const draftTeams = e => {
-      setState('=== Drafting Teams ===')
-      // setState('=== Teams Drafted ===')
-    }
+    // -1- //
+      const createGame = e => {
+        const result = ES6_FUNCTIONS_startGame.RUN_startGame()
+        setActiveGame(result)
+        // -- * -- //
+        setState('=== Pre: Fill Player & Team Universe ===')
+      }
+    // -2- //
+      const fillUniverse = e => {
+        const teamsResult = ES6_FUNCTIONS_fillTeamUniverse.fillTeamUniverse(ES6_DATA_teamUniverse)
+          setTeamUniverse(teamsResult)
+          
+        const playersResult = ES6_FUNCTIONS_fillPlayerUniverse.fillPlayerUniverse(ES6_DATA_playerUniverse)
+          setPlayerUniverse(playersResult)  
+        // -- * -- //
+        setState('=== Pre: Check Num of Human Players ===')
+      }
+    // -3- //
+      const getHumanPlayers = num => {
+        setHumanPlayers(num)
+      }
+    // -4- //
+      const draftTeams = e => {
+        // setState('=== Drafting Teams ===')
+        // setState('=== Teams Drafted ===')
+      }
+
+
+
+
     const draftPlayers = e => {
       setState('=== Players Drafted ===')
     }
 
-    useEffect(() => {
-      console.log('USE EFFECT TRIGGERED')
-      // setState('POST: gameObject made // PRE: User Starts Game')
-      console.log(state)
-      console.log(activeGame)
-      console.log(teamUniverse)
-      console.log(playerUniverse)
-    })
+// -- ** -- ** -- ** //
+// -- ** -- ** -- ** //
+    
+    // - USE EFFECT - //
+      // -1- //
+        useEffect(() => {
+          console.log('USE EFFECT TRIGGERED')
+          // setState('POST: gameObject made // PRE: User Starts Game')
+          console.log(state)
+          console.log(activeGame)
+          console.log(teamUniverse)
+          console.log(playerUniverse)
+          console.log(numHumanPlayers)
+        })
+      // -2- //
+        useEffect(() => {
+          if (numHumanPlayers !== undefined) {
+            console.log('IF TRIGGERED')
+            setState('=== Pre: Drafting Teams ===')
+          }
+        }, [numHumanPlayers])
 
+// -- ** -- ** -- ** //
+// -- ** -- ** -- ** //
+    
   // - COMPONENT TO EXPORT - //
     return (
       <APP_CONTAINER className="App">
         <h1>Welcome To Today's Game!</h1>
+        {/* -1- */}
+          {state === '=== Pre-Game ===' && 
+            <Button 
+              buttonFunction={createGame}
+              buttonText={'Start Game!'}
+            />}
+          {activeGame && <GameSummary activeGame={activeGame} state={state} />}
+
+        {/* -2- */}
+          {state === '=== Pre: Fill Player & Team Universe ===' &&
+            <Button 
+              buttonFunction={fillUniverse}
+              buttonText={'Fill Player & Team Universe!'}
+            />}
+
+        {/* -3- */}
+          {state === '=== Pre: Check Num of Human Players ===' &&
+            <>                  
+              <NumInput getHumanPlayers={getHumanPlayers}/>        
+            </>
+          }
+        
+        {/* -4- */}
+          {state === '=== Pre: Drafting Teams ===' &&
+            <DraftContainer teamUniverse={teamUniverse}/>
+          }
+
+
+
+
+          
       {/* // -- * -- // */}
-        {state === '=== Pre-Game ===' && 
-          <Button 
-            buttonFunction={createGame}
-            buttonText={'Start Game!'}
-          />}
-      {/* // -- * -- // */}
-        {activeGame && <GameSummary activeGame={activeGame} state={state} />}
-      {/* // -- * -- // */}
-        {state === '=== Game Created ===' &&
-          <Button 
-            buttonFunction={fillUniverse}
-            buttonText={'Fill Player Universe!'}
-          />}
-      {/* // -- * -- // */}
-        {state === '=== Universe Filled ===' &&
+        {state === '=== Team Draft Players ===' &&
           <Button 
             buttonFunction={draftTeams}
             buttonText={'Ready to draft your TEAMS??'}
           />}
-          {state === '=== Drafting Teams ===' &&
-            <DraftContainer />
-          }
       {/* // -- * -- // */}
-        {state === '=== Teams Drafted ===' &&
+        {/* {state === '=== Teams Drafted ===' &&
           <Button 
             buttonFunction={draftPlayers}
             buttonText={'Ready to draft your PLAYERS??'}
-          />}
+          />} */}
       </APP_CONTAINER>
     );
 }
+
+// -- ** -- ** -- ** //
+// -- ** -- ** -- ** //
 
 // - EXPORTS - //
 export default App;
