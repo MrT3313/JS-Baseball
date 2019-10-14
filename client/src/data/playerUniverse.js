@@ -6,7 +6,7 @@
 
 // -- Pitchers -- //
     const pitchers_array = [
-        {
+        {position: 'pitcher',
             firstName: 'Babe', lastName: 'Ruth',
             number: 3,
             stats: {
@@ -19,7 +19,7 @@
             },
             // position: 'pitcher'
         },
-        {
+        {position: 'pitcher',
             firstName: 'Pedro', lastName: 'Martinez',
             number: 25,
             stats: {
@@ -32,7 +32,7 @@
             },
             // position: 'pitcher'
         },
-        {
+        {position: 'pitcher',
             firstName: 'Roger', lastName: 'Clemens',
             number: 25,
             stats: {
@@ -45,7 +45,7 @@
             },
             // position: 'pitcher'
         },
-        {
+        {position: 'pitcher',
             firstName: 'Cy', lastName: 'Young',
             number: 25,
             stats: {
@@ -58,7 +58,7 @@
             },
             // position: 'pitcher'
         },
-        {
+        {position: 'pitcher',
             firstName: 'Randy', lastName: 'Johnson',
             number: 25,
             stats: {
@@ -77,7 +77,7 @@
 
 // -- DH -- // 
     const dh_array = [
-        {
+        {position: 'dh',
             firstName: 'David', lastName: 'Ortiz',
             number: 34,
             stats: {
@@ -86,7 +86,7 @@
             },
             // position: 'dh'
         },
-        {
+        {position: 'dh',
             firstName: 'Vladimir', lastName: 'Guerrero',
             number: 27,
             stats: {
@@ -103,7 +103,7 @@
 // -- DEFAULT -- // 
     const infield_array = [
         // -- Comical -- //
-        {
+        {position: 'infield',
             firstName: 'Mascot', lastName: undefined,
             number: 100,
             stats: {
@@ -112,7 +112,7 @@
             },
             // position: 'infield'
         },        
-        {
+        {position: 'infield',
             firstName: 'Bat-Boy', lastName: undefined,
             number: 0,
             stats: {
@@ -121,7 +121,7 @@
             },
             // position: 'infield'
         },    
-        {
+        {position: 'infield',
             firstName: 'StreakingFan', lastName: undefined,
             number: -1,
             stats: {
@@ -131,7 +131,7 @@
             // position: 'infield'
         },          
         // -- Infield -- //
-        {
+        {position: 'infield',
             firstName: 'Jason', lastName: 'Varitek',
             number: 33,
             stats: {
@@ -140,7 +140,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Derek', lastName: 'Jeter',
             number: 2,
             stats: {
@@ -149,7 +149,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Reed', lastName: 'Turgeon',
             number: 13,
             stats: {
@@ -158,7 +158,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Yogi', lastName: 'Berra',
             number: 99,
             stats: {
@@ -167,7 +167,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Albert', lastName: 'Pujols',
             number: 99,
             stats: {
@@ -176,7 +176,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Lou', lastName: 'Gehrig',
             number: 99,
             stats: {
@@ -185,7 +185,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Derek', lastName: 'Jeter',
             number: 99,
             stats: {
@@ -194,7 +194,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Cal', lastName: 'Ripken Jr.',
             number: 99,
             stats: {
@@ -203,7 +203,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Wade', lastName: 'Boggs',
             number: 99,
             stats: {
@@ -212,7 +212,7 @@
             },
             // position: 'infield'
         },
-        {
+        {position: 'infield',
             firstName: 'Jackie', lastName: 'Robinson',
             number: 99,
             stats: {
@@ -225,7 +225,7 @@
     
     const outfield_array = [
         // -- Outfield -- //
-        {
+        {position: 'outfield',
             firstName: 'Manny', lastName: 'Ramirez',
             number: 24,
             stats: {
@@ -234,7 +234,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Ted', lastName: 'Williams',
             number: 9,
             stats: {
@@ -243,7 +243,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Mike', lastName: 'Trout',
             number: 27,
             stats: {
@@ -252,7 +252,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Bryce', lastName: 'Harper',
             number: 34,
             stats: {
@@ -261,7 +261,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Willie', lastName: 'Mays',
             number: 1,
             stats: {
@@ -270,7 +270,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Mickey', lastName: 'Mantle',
             number: 1,
             stats: {
@@ -279,7 +279,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Ken', lastName: 'Griffey Jr.',
             number: 1,
             stats: {
@@ -288,7 +288,7 @@
             },
             // position: 'outfield'
         },
-        {
+        {position: 'outfield',
             firstName: 'Hank', lastName: 'Aaron',
             number: 1,
             stats: {
@@ -302,18 +302,10 @@
 // -- *** -- //
 // -- *** -- //
 
-// -*- ES6 EXPORTS -*- //
+// ES6 EXPORTS
 export default {
     infield_array,
     outfield_array,
     pitchers_array,
     dh_array
 }
-
-// -*- NODE EXPORTS -*- //
-// module.exports = {
-    // infield_array,
-    // outfield_array,
-    // pitchers_array,
-    // dh_array
-// }

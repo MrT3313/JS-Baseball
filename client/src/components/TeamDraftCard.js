@@ -6,11 +6,13 @@ import styled from 'styled-components'
 // IMPORT ACTION CREATORS
 import {a_draftTeam} from '../redux/actions/a_draftTeam.js'
 
-
 // COMPONENTS 
+
+// STYLED COMPONENTS 
 const StyledTeamDraftCard = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     padding: 10px;
@@ -19,7 +21,6 @@ const StyledTeamDraftCard = styled.div`
     border-radius: 5px;
     border: 1px solid blue;
 `;
-
 
 // COMPONENT TO EXPORT
 function TeamDraftCard(props) {
@@ -57,6 +58,7 @@ console.log('<TeamDraftCard /> props: ', props)
     )
 }
 
+// Map State To Props
 const mapStateToProps = state => {
     return {
         teamUniverse: state.AVAILABLE_UNIVERSE.teamUniverse,
@@ -71,3 +73,4 @@ export default connect(
         a_draftTeam
     } // action creators
 )(TeamDraftCard)
+

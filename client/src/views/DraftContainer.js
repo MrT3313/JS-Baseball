@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 // COMPONENTS
 import TeamDraftCard from '../components/TeamDraftCard.js'
+import PlayerDraftCard from '../components/PlayerDraftCard.js'
 
 // STYLED COMPONENTS
 const UNIVERSE_CONTAINER = styled.div`
@@ -30,16 +31,31 @@ console.log(props)
     // -- //
     return(
         <UNIVERSE_CONTAINER>
-            {props.availableUniverse.map((team, key) => {
-            // console.log(team)
-                return (
-                    <TeamDraftCard 
-                        team={team}
-                        pickNum={pickNum} setPickNum={setPickNum}
-                        id={key} key={key} 
-                    />
-                )
-            })}
+            {props.type === 'team' &&
+                props.availableUniverse.map((team, key) => {
+                // console.log(team)
+                    return (
+                        <TeamDraftCard 
+                            team={team}
+                            pickNum={pickNum} setPickNum={setPickNum}
+                            id={key} key={key} 
+                        />
+                    )
+                })
+            }
+            {props.type === 'player' &&
+                props.availableUniverse.map((player, key) => {
+                    return (
+                        <PlayerDraftCard 
+                            player={player}
+                            pickNum={pickNum} setPickNum={setPickNum}
+                            id={key} key={key} 
+                        />
+                    )
+                })
+            }
+
+
         </UNIVERSE_CONTAINER>
     )
 }
