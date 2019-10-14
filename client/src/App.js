@@ -12,21 +12,14 @@ import {a_fillUniverse} from './redux/actions/a_fillUniverse.js'
 
 // COMPONENTS
 import GameDisplay from './views/GameDisplay.js'
-import TeamDraftCard from './components/TeamDraftCard.js'
+import DraftContainer from './views/DraftContainer.js'
+
 
 // STYLED COMPONENTS
 const APP_CONTAINER = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
-const TEAM_UNIVERSE_CONTAINER = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  border-radius: 5px;
-  border: 1px solid orange;
 `;
 
 // COMPONENT TO EXPORT
@@ -75,12 +68,18 @@ function App(props) {
         >Click To Fill Player & Team Universe</button>
       }
       {gameState === 'Pre: Team Draft' &&
-        <TEAM_UNIVERSE_CONTAINER>
-          {props.teamUniverse.map(team => {
-            console.log(team)
-            return <TeamDraftCard team={team}/>
-          })}
-        </TEAM_UNIVERSE_CONTAINER>
+        <DraftContainer 
+          type={'team'}
+          availableUniverse={props.teamUniverse} 
+          setGameState={setGameState}
+        />
+      }
+      {gameState === 'Pre: Player Draft' &&
+        <DraftContainer 
+          type={'player'}
+          availableUniverse={props.playerUniverse} 
+          setGameState={setGameState}
+        />
       }
     </APP_CONTAINER>
   );
@@ -100,7 +99,7 @@ export default connect(
 	mapStateToProps, // map state to props
 	{
     a_createGame,
-    a_fillUniverse
+    a_fillUniverse,
   } // action creators
 )(App)
 

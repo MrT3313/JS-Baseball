@@ -26,6 +26,7 @@
         this.gameTime = this.formatDate(new Date())
         this.endTime = undefined
         // --*-- //
+        this.inningsTeams = []
         this.inningsArray = []
         this.activeTeams = []
     }

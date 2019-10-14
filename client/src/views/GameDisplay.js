@@ -4,7 +4,7 @@
     import styled from 'styled-components'
 
 // COMPONENTS 
-    import TeamContainer from './TeamContainer.js'
+    import TeamContainer from '../components/TeamContainer.js'
 
 // STYLED COMPONENTS
 const GameDisplay_Container = styled.div`
@@ -24,24 +24,26 @@ const GameDisplay_Container = styled.div`
     border: 1px solid black
 `;
 // COMPONENT TO EXPORT
-function GameDisplay({activeGame}) {
-    // console.log(props)
-    console.log(activeGame)
-    // console.log(props.activeGame)
+function GameDisplay(props) {
+    console.log(props)
     
     // - METHODS - //
 
     // - USE EFFECT - //
     useEffect(() => {
         console.log('USE EFFECT TRIGGERED')
-        console.log(activeGame)
+        console.log(props.activeGame)
     })
     return(
         <GameDisplay_Container>
-            <div>Game Date: {activeGame.gameTime}</div>
+            <div>Game Date: {props.activeGame.gameTime}</div>
             <div className='ActiveTeams'>
-                <TeamContainer homeTeam={'true'}></TeamContainer>
-                <TeamContainer homeTeam={'false'}></TeamContainer>
+                {props.activeTeams.length !== 0 &&
+                    props.activeTeams.map(team => {
+                        console.log('THIS IS A TEAM!!!!',team)
+                        return <TeamContainer team={team} />
+                    })
+                }
             </div>
         </GameDisplay_Container>
     )
@@ -50,6 +52,7 @@ function GameDisplay({activeGame}) {
 const mapStateToProps = state => {
     return {
         activeGame: state.ACTIVE_GAME.activeGame,
+        activeTeams: state.ACTIVE_GAME.activeGame.activeTeams,
     }
 }
 
