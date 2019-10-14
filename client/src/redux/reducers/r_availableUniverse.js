@@ -5,6 +5,7 @@ import {
     FILL_UNIVERSE_FAILURE,
 } from '../actions/a_fillUniverse.js'
 
+
 // INITIAL STATE
 const initialState = {
     is_updating: false,
@@ -15,7 +16,7 @@ const initialState = {
 
 // REDUCER
 export const r_availableUniverse = (state = initialState, action) => {
-    console.log(action.payload)
+    // console.log(action.payload)
     // -- // 
     switch(action.type) {
         case FILL_UNIVERSE_START:

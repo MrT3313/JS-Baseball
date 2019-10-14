@@ -11,7 +11,7 @@ import * as PLAYER_UNIVERSE from '../../data/playerUniverse.js'
     export const FILL_UNIVERSE_SUCCESS = 'FILL_UNIVERSE_SUCCESS'
     export const FILL_UNIVERSE_FAILURE = 'FILL_UNIVERSE_FAILURE'
 
-export const a_fullUniverse = () => dispatch => {
+export const a_fillUniverse = () => dispatch => {
     console.log(fillTeamUniverse)
     console.log(teams_array)
     console.log(PLAYER_UNIVERSE.default)

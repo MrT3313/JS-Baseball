@@ -1,0 +1,5 @@
+# Global settings applied to the whole site.
+[build]
+  base = "JS-Baseball/"
+  publish = "JS_PROTOTYPAL/public"
+

@@ -7,7 +7,6 @@ import {
 
 // INITIAL STATE
 const initialState = {
-    gameState: '',
     is_creatingGame: false,
     error: '',
     activeGame: undefined
@@ -28,7 +27,6 @@ export const r_activeGame = (state = initialState, action) => {
             return {
                 ...state,
                 is_creatingGame: false,
-                gameState: 'Pre: Fill Universe',
                 activeGame: action.payload
             }
         case CREATE_GAME_FAILURE:
