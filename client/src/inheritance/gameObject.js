@@ -28,7 +28,8 @@
         // --*-- //
         this.inningsTeams = []
         this.inningsArray = []
-        this.activeTeams = []
+        this.homeTeam = {}
+        this.awayTeam = {}
     }
 
     // -- Prototype -- //

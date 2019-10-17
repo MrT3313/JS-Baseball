@@ -11,6 +11,11 @@ import {
     DRAFT_TEAM_FAILURE,
 } from '../actions/a_draftTeam.js'
 
+import {
+    DRAFT_PLAYER_START,
+    DRAFT_PLAYER_SUCCESS,
+    DRAFT_PLAYER_FAILURE,
+} from '../actions/a_draftPlayer.js'
 
 // INITIAL STATE
 const initialState = {
@@ -63,6 +68,24 @@ export const r_availableUniverse = (state = initialState, action) => {
                 ...state,
                 is_updating: false,
                 error:'Unable to Draft Team'
+            }
+        // DRAFTING PLAYER
+        case DRAFT_PLAYER_START:
+            return {
+                ...state,
+                is_updating: true,
+            }
+        case DRAFT_PLAYER_SUCCESS:
+            return {
+                ...state,
+                is_updating: false,
+                playerUniverse: [...action.payload.playerUniverse]
+            }
+        case DRAFT_PLAYER_FAILURE:
+            return {
+                ...state,
+                is_updating: false,
+                error:'Unable to Draft Player'
             }
         default:
             return state

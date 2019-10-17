@@ -35,7 +35,7 @@ function TeamContainer(props) {
     // -- //
     return(
         <StyledTeamContainer>
-            {props.team.homeTeam ? <Title>Home Team</Title> : <Title>Away Team</Title>}
+            {props.type === 'home' ? <Title>Home Team</Title> : <Title>Away Team</Title>}
             
             <Data className='city'>{props.team.city}</Data>
             <Data className='name'>{props.team.name}</Data>

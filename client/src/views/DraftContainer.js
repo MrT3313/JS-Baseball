@@ -8,10 +8,32 @@ import TeamDraftCard from '../components/TeamDraftCard.js'
 import PlayerDraftCard from '../components/PlayerDraftCard.js'
 
 // STYLED COMPONENTS
-const UNIVERSE_CONTAINER = styled.div`
+const STYLED_draftContainer = styled.div`
+
+`;
+const STYLED_draftBoard = styled.div`
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding: 15px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .subTitle {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            font-style: italic;
+        }
+    }
+    .availableUniverse {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
     border-radius: 5px;
     border: 1px solid orange;
@@ -24,39 +46,49 @@ console.log(props)
     useEffect(() => {
         if(props.type === 'team') {
             if(pickNum > 2) {
+                setPickNum(1)
                 props.setGameState('Pre: Player Draft')
             }
         }
     }, [pickNum])
     // -- //
     return(
-        <UNIVERSE_CONTAINER>
-            {props.type === 'team' &&
-                props.availableUniverse.map((team, key) => {
-                // console.log(team)
-                    return (
-                        <TeamDraftCard 
-                            team={team}
-                            pickNum={pickNum} setPickNum={setPickNum}
-                            id={key} key={key} 
-                        />
-                    )
-                })
-            }
-            {props.type === 'player' &&
-                props.availableUniverse.map((player, key) => {
-                    return (
-                        <PlayerDraftCard 
-                            player={player}
-                            pickNum={pickNum} setPickNum={setPickNum}
-                            id={key} key={key} 
-                        />
-                    )
-                })
-            }
+        <>
+{/* TODO: import draft progress */}
+        <STYLED_draftBoard>
+            <div className='title'>
+                Live Draft Board -- Remaining Available Universe
+                <div className='subTitle'>** Click to select **</div>
+            </div>
+            <div className='availableUniverse'>
+                {props.type === 'team' &&
+                    props.availableUniverse.map((team, key) => {
+                    // console.log(team)
+                        return (
+                            <TeamDraftCard 
+                                team={team}
+                                pickNum={pickNum} setPickNum={setPickNum}
+                                id={key} key={key} 
+                            />
+                        )
+                    })
+                }
+                {props.type === 'player' &&
+                    props.availableUniverse.map((player, key) => {
+                        return (
+                            <PlayerDraftCard 
+                                player={player}
+                                pickNum={pickNum} setPickNum={setPickNum}
+                                id={key} key={key} 
+                            />
+                        )
+                    })
+                }
+            </div>
 
 
-        </UNIVERSE_CONTAINER>
+        </STYLED_draftBoard>
+        </>
     )
 }
 

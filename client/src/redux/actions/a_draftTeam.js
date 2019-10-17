@@ -5,16 +5,22 @@
 
 
 // ACTION CREATOR
-export const a_draftTeam = (availableUniverse, selection) => dispatch => {
+export const a_draftTeam = (availableUniverse, selection, homeTeamBool) => dispatch => {
     
     // -- //
         // -1- // First Action
         dispatch({type: DRAFT_TEAM_START})
-        
-
+        // -- //
+        let objToPass = {
+            teamUniverse: [...availableUniverse],
+            selection,
+            homeTeamBool,
+        }
+            console.log(objToPass)
+        // -- //
         if (availableUniverse && selection) {
             // -2- // Second Action
-            dispatch({type: DRAFT_TEAM_SUCCESS, payload: {teamUniverse: [...availableUniverse], selection}})
+            dispatch({type: DRAFT_TEAM_SUCCESS, payload: objToPass })
         } else {
             // -3- // Second Action
             dispatch({DRAFT_TEAM_FAILURE, payload: 'Unable to select team'})

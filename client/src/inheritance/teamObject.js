@@ -25,7 +25,6 @@
         this.name = team_attrs.name
         // --*-- //
         this.user = undefined
-        this.homeTeam = undefined
         this.teamPlayers = []
         this.battingOrder_index = 0
     }

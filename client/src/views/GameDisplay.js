@@ -38,12 +38,8 @@ function GameDisplay(props) {
         <GameDisplay_Container>
             <div>Game Date: {props.activeGame.gameTime}</div>
             <div className='ActiveTeams'>
-                {props.activeTeams.length !== 0 &&
-                    props.activeTeams.map(team => {
-                        console.log('THIS IS A TEAM!!!!',team)
-                        return <TeamContainer team={team} />
-                    })
-                }
+                <TeamContainer team={props.homeTeam} type={'home'}/>
+                <TeamContainer team={props.awayTeam} type={'away'}/>
             </div>
         </GameDisplay_Container>
     )
@@ -52,7 +48,8 @@ function GameDisplay(props) {
 const mapStateToProps = state => {
     return {
         activeGame: state.ACTIVE_GAME.activeGame,
-        activeTeams: state.ACTIVE_GAME.activeGame.activeTeams,
+        homeTeam: state.ACTIVE_GAME.activeGame.homeTeam,
+        awayTeam: state.ACTIVE_GAME.activeGame.awayTeam,
     }
 }
 

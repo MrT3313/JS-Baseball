@@ -40,11 +40,11 @@ console.log('<TeamDraftCard /> props: ', props)
         }
         // -- // 
         let selection = availableUniverse.splice(props.id,1)[0]
-        selection.homeTeam = homeTeam
+        // selection.homeTeam = homeTeam
             console.log(selection)
             console.log(availableUniverse)
         // -- //
-        props.a_draftTeam(availableUniverse, selection)
+        props.a_draftTeam(availableUniverse, selection, homeTeam)
         // -- //
         props.setPickNum(props.pickNum + 1)
     }
