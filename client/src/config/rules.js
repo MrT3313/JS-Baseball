@@ -12,6 +12,7 @@ const GAME_RULES = {
     min_pitchers: 1,
     min_DHs: 1,
     activePitch_BALL_threshold: 40,
+    positions: ['infield', 'outfield','pitcher', 'dh']
 }
 // console.log(GAME_RULES)
 

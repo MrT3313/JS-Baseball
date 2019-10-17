@@ -8,9 +8,6 @@ import TeamDraftCard from '../components/TeamDraftCard.js'
 import PlayerDraftCard from '../components/PlayerDraftCard.js'
 
 // STYLED COMPONENTS
-const STYLED_draftContainer = styled.div`
-
-`;
 const STYLED_draftBoard = styled.div`
     display: flex;
     flex-direction: column;

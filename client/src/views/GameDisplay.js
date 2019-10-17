@@ -18,6 +18,11 @@ const GameDisplay_Container = styled.div`
     .ActiveTeams {
         display: flex;
         justify-content: center;
+
+    }
+
+    .gameDate {
+        margin-bottom: 10px;
     }
 
     border-radius: 5px;
@@ -36,10 +41,10 @@ function GameDisplay(props) {
     })
     return(
         <GameDisplay_Container>
-            <div>Game Date: {props.activeGame.gameTime}</div>
+            <div className='gameDate'>Game Date: {props.activeGame.gameTime}</div>
             <div className='ActiveTeams'>
-                <TeamContainer team={props.homeTeam} type={'home'}/>
-                <TeamContainer team={props.awayTeam} type={'away'}/>
+                <TeamContainer className='team' team={props.homeTeam} type={'home'}/>
+                <TeamContainer className='team' team={props.awayTeam} type={'away'}/>
             </div>
         </GameDisplay_Container>
     )
