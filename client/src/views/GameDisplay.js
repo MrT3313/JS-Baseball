@@ -18,7 +18,6 @@ const GameDisplay_Container = styled.div`
     .ActiveTeams {
         display: flex;
         justify-content: center;
-
     }
 
     .gameDate {
@@ -43,8 +42,8 @@ function GameDisplay(props) {
         <GameDisplay_Container>
             <div className='gameDate'>Game Date: {props.activeGame.gameTime}</div>
             <div className='ActiveTeams'>
-                <TeamContainer className='team' team={props.homeTeam} type={'home'}/>
-                <TeamContainer className='team' team={props.awayTeam} type={'away'}/>
+                <TeamContainer team={props.homeTeam} type={'home'}/>
+                <TeamContainer team={props.awayTeam} type={'away'}/>
             </div>
         </GameDisplay_Container>
     )
