@@ -77,7 +77,7 @@ const STYLED_positionCatTab = styled.div`
 function DraftContainer(props) {
 const [pickNum, setPickNum] = useState(1)
 const [selectedCategory, setSelectedCategory] = useState('infield')
-console.log(props)
+console.log('<DraftContainer /> props',props)
 // -- //
     useEffect(() => {
         if(props.type === 'team') {
@@ -150,7 +150,7 @@ console.log(props)
                                         <PlayerDraftCard 
                                             player={player}
                                             pickNum={pickNum} setPickNum={setPickNum}
-                                            id={key} key={key} 
+                                            id={player.id} key={key} 
                                         />
                                     )
                                 })}

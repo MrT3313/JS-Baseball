@@ -1,4 +1,4 @@
-// -*- IMPORTS -*- //
+// IMPORTS
     // -A- // ES6 Imports
     import ES6_INHERITANCE_playerObject from '../inheritance/playerObject.js'
     import ES6_DATA_playerUniverse from '../data/playerUniverse'
@@ -6,27 +6,41 @@
     // -B- // Node Imports
     // const NODE_playerUniverse = require('../../data/playerUniverse.js')
 
-// -*- Set Variables -*- //
+    import {useState} from 'react'
+// VARIABLES
 const playerData = ES6_DATA_playerUniverse
     // console.log(playerData)
 
-// -*- fillPlayerUniverse-*- //
+
 const fillPlayerUniverse = (playerUniverse) => {
     console.log('-X- insideRun_fillTeamUniverse -X-')
     console.log('-X- playerUniverse -X-',playerUniverse)
     const resultToReturn = []
-    // --*-- //
+    // -- //
+    const universe_withIDs = playerUniverse.map((player, index) => {
+        player.id = index
+        return player
+    })
+        console.log('!!!!!!!!!!!!!!!!!',universe_withIDs)
+    // -- //
     const playerPositionArrays = Object.keys(playerUniverse).map(i => playerUniverse[i])
-    // --*-- //
+    // -- //
     playerPositionArrays.forEach((positionArray, i) => {
         // console.log('-X- positionArray -X-',positionArray)
         // console.log('-X- i -X-',i)
         switch(i){
             case 0:
                 // pitchers
-                positionArray.map(player => resultToReturn.push(
-                    new ES6_INHERITANCE_playerObject.SUB_playerObject_pitcher(player)
-                ))
+                // positionArray.map(player => resultToReturn.push(
+                //     new ES6_INHERITANCE_playerObject.SUB_playerObject_pitcher(player)
+                // ))
+                // positionArray.map((player, index) => {
+                //     player.id
+                // })
+                    
+                //     resultToReturn.push(
+                //     new ES6_INHERITANCE_playerObject.SUB_playerObject_pitcher(player)
+                // ))
                 break;
             case 1:
                 // dh

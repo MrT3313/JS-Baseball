@@ -56,8 +56,6 @@ console.log('<PlayerDraftCard /> props', props)
     // -- //
     // - Methods - //
     const clickHandler = () => {
-    console.log(props.team)
-    console.log(props.id)
     // -- //
         const availableUniverse = props.playerUniverse
         let homeTeam = undefined
@@ -68,7 +66,15 @@ console.log('<PlayerDraftCard /> props', props)
                 homeTeam = false
             }
         // -- // 
-        let selection = availableUniverse.splice(props.id,1)[0]
+            console.log(props.player.id)
+            console.log(availableUniverse)
+        let foundPlayer = availableUniverse.find(player => player.id === props.player.id)
+            console.log(foundPlayer)
+            console.log(foundPlayer.id)
+        let spliceIndex = availableUniverse.indexOf(foundPlayer)
+            console.log(spliceIndex)
+        // -- // 
+        let selection = availableUniverse.splice(spliceIndex,1)[0]
         // selection.homeTeam = homeTeam
             console.log(selection)
             console.log(availableUniverse)

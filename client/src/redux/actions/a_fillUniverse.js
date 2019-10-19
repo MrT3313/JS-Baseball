@@ -32,6 +32,11 @@ export const a_fillUniverse = () => dispatch => {
             return playerUniverse
         })
     // -- // 
+        playerUniverse.forEach((player, index) => {
+            return player.id = index
+        })
+        console.log(playerUniverse)
+    // -- // 
         if (playerUniverse.length !== 0 && teamUniverse.length !== 0) {
             // -2- // SECOND DISPATCH
             dispatch({ type: FILL_UNIVERSE_SUCCESS, payload: {

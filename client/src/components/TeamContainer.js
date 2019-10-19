@@ -13,6 +13,8 @@ const StyledTeamContainer = styled.div`
     display: flex;
     flex-direction: column;
 
+    min-width: 200px;
+
     border-radius: 5px;
     border: 1px solid purple;
 `;
@@ -33,6 +35,22 @@ const Data = styled.div`
 const STYLED_roster = styled.div`
     display: flex;
     flex-direction: column;
+
+    .player {
+        display: flex;
+        justify-content: space-between;
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        .playerName {
+            margin-right: 10px;
+        }
+    }
+    .emptyRoster {
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 // COMPONENT TO EXPORT
@@ -48,27 +66,79 @@ function TeamContainer(props) {
 
                 <STYLED_roster>
                     {Object.keys(props.team).length !== 0 && props.team.teamPlayers.length !== 0 &&
-                    // -- //
-                        GAME_RULES.GAME_RULES.positions.forEach(position => {
-                            console.log(position)
-                            const positionArray = props.team.teamPlayers.filter(player => player.position === position)
-                                console.log(positionArray)
-                            // -- //
-                            return (
-                                <>
-                                    {/* TODO: Import <RosterArray/> */}
-                                </>
-                                // <>
-                                //     <Title>{position}</Title>
-                                //     {positionArray.forEach(filteredPlayer => {
-                                //         console.log(filteredPlayer)
-                                //         return (
-                                //             <div>{`${filteredPlayer.firstName} ${filteredPlayer.lastName}`}</div>
-                                //         )
-                                //     })}
-                                // </>
-                            )
-                        })
+                        <>
+                            <div>
+                                <div>Infielders</div>
+
+                                {props.team.teamPlayers.filter(player => player.position === 'infield').map((player, index) => {
+                                    return (
+                                        <div className='player'>
+                                            <div>
+                                                {player.lastName ?
+                                                    <div className='playerName'> {`${player.firstName} ${player.lastName} `} </div>
+                                                    :
+                                                    <div className='playerName'> {`${player.firstName}`} </div>
+                                                }
+                                            </div>
+                                            <div>
+                                                {`${player.power} -- ${player.skill} -- ${player.speed}` }
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                            <div>Outfielders</div>
+                            {props.team.teamPlayers.filter(player => player.position === 'outfield').map((player, index) => {
+                                    return (
+                                        <div className='player'>
+                                            <div>
+                                                {player.lastName ?
+                                                    <div className='playerName'> {`${player.firstName} ${player.lastName} `} </div>
+                                                    :
+                                                    <div className='playerName'> {`${player.firstName}`} </div>
+                                                }
+                                            </div>
+                                            <div>
+                                                {`${player.power} -- ${player.skill} -- ${player.speed}` }
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            <div>Pitchers</div>
+                            {props.team.teamPlayers.filter(player => player.position === 'pitcher').map((player, index) => {
+                                    return (
+                                        <div className='player'>
+                                            <div>
+                                                {player.lastName ?
+                                                    <div className='playerName'> {`${player.firstName} ${player.lastName} `} </div>
+                                                    :
+                                                    <div className='playerName'> {`${player.firstName}`} </div>
+                                                }
+                                            </div>
+                                            <div>
+                                                {`${player.power} -- ${player.skill} -- ${player.speed}` }
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                            <div>DH's</div>
+                            {props.team.teamPlayers.filter(player => player.position === 'dh').map((player, index) => {
+                                    return (
+                                        <div className='player'>
+                                            <div>
+                                                {player.lastName ?
+                                                    <div className='playerName'> {`${player.firstName} ${player.lastName} `} </div>
+                                                    :
+                                                    <div className='playerName'> {`${player.firstName}`} </div>
+                                                }
+                                            </div>
+                                            <div>
+                                                {`${player.power} -- ${player.skill} -- ${player.speed}` }
+                                            </div>
+                                        </div>
+                                    )
+                                })}
+                        </>
                     }
 
                 </STYLED_roster>
